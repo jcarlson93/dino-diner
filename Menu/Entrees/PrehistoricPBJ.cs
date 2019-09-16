@@ -5,14 +5,27 @@ using System.Collections.Generic;
 
 namespace DinoDiner.Menu.Entrees
 {
+    /// <summary>
+    /// Represents the Prehistoric PB and J entree.
+    /// </summary>
     public class PrehistoricPBJ
     {
+        // Tells whether the ingredients are on the sandwhich or not.
         private bool peanutButter = true;
         private bool jelly = true;
 
+        /// <summary>
+        /// Property that gets and sets the price.
+        /// </summary>
         public double Price { get; set; }
+        /// <summary>
+        /// Property that gets and sets the calories.
+        /// </summary>
         public uint Calories { get; set; }
 
+        /// <summary>
+        /// List to store the ingredients.
+        /// </summary>
         public List<string> Ingredients
         {
             get
@@ -24,17 +37,26 @@ namespace DinoDiner.Menu.Entrees
             }
         }
 
+        /// <summary>
+        /// Constructor for the Prehistoric PB and J class. Sets the price and calories.
+        /// </summary>
         public PrehistoricPBJ()
         {
             this.Price = 6.52;
             this.Calories = 483;
         }
 
+        /// <summary>
+        /// Method to hold the peanut butter.
+        /// </summary>
         public void HoldPeanutButter()
         {
             this.peanutButter = false;
         }
 
+        /// <summary>
+        /// Method to hold the jelly.
+        /// </summary>
         public void HoldJelly()
         {
             this.jelly = false;

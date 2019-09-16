@@ -5,12 +5,23 @@ using System.Collections.Generic;
 
 namespace DinoDiner.Menu.Entrees
 {
+    /// <summary>
+    /// Represents the Pterodactyl Wings entree.
+    /// </summary>
     public class PterodactylWings
     {
-
+        /// <summary>
+        /// Property that gets and sets the price.
+        /// </summary>
         public double Price { get; set; }
+        /// <summary>
+        /// Property that gets and sets the calories.
+        /// </summary>
         public uint Calories { get; set; }
 
+        /// <summary>
+        /// List to store the ingredients.
+        /// </summary>
         public List<string> Ingredients
         {
             get
@@ -21,6 +32,9 @@ namespace DinoDiner.Menu.Entrees
             }
         }
 
+        /// <summary>
+        /// Constructor for the Pterodactyl Wings class. Sets the price and calories.
+        /// </summary>
         public PterodactylWings()
         {
             this.Price = 7.21;

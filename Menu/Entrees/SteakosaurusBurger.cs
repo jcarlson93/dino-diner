@@ -5,16 +5,29 @@ using System.Collections.Generic;
 
 namespace DinoDiner.Menu.Entrees
 {
+    /// <summary>
+    /// Represents the Steakosaurus Burger.
+    /// </summary>
     public class SteakosaurusBurger
     {
+        // Tells whether the ingredients are on the burger or not.
         private bool bun = true;
         private bool pickle = true;
         private bool ketchup = true;
         private bool mustard = true;
 
+        /// <summary>
+        /// Property that gets and sets the price.
+        /// </summary>
         public double Price { get; set; }
+        /// <summary>
+        /// Property that gets and sets the calories.
+        /// </summary>
         public uint Calories { get; set; }
 
+        /// <summary>
+        /// List to store the ingredients.
+        /// </summary>
         public List<string> Ingredients
         {
             get
@@ -28,27 +41,42 @@ namespace DinoDiner.Menu.Entrees
             }
         }
 
+        /// <summary>
+        /// Constructor for the Steakosaurus Burger class. Sets the price and calories.
+        /// </summary>
         public SteakosaurusBurger()
         {
             this.Price = 5.15;
             this.Calories = 621;
         }
 
+        /// <summary>
+        /// Method to hold the bun.
+        /// </summary>
         public void HoldBun()
         {
             bun = false;
         }
 
+        /// <summary>
+        /// Method to hold the pickle.
+        /// </summary>
         public void HoldPickle()
         {
             pickle = false;
         }
 
+        /// <summary>
+        /// Method to hold the ketchup.
+        /// </summary>
         public void HoldKetchup()
         {
             ketchup = false;
         }
 
+        /// <summary>
+        /// Method to hold the mustard.
+        /// </summary>
         public void HoldMustard()
         {
             mustard = false;
