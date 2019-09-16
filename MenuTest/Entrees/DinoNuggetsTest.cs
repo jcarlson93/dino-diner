@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Xunit;
+using DinoDiner.Menu.Entrees;
 
 namespace MenuTest.Entrees
 {
@@ -71,7 +72,7 @@ namespace MenuTest.Entrees
             Assert.Equal(dn.Price, 5.0);
         }
 
-
+        
         public void AddingNuggetsShouldIncreaseCalories()
         {
             DinoNuggets dn = new DinoNuggets();

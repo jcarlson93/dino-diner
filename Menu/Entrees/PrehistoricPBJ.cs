@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿/* PrehistoricPBJ.cs
+ * Author: Jake Carlson
+ */
+using System.Collections.Generic;
 
 namespace DinoDiner.Menu.Entrees
 {
