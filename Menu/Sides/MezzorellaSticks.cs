@@ -5,9 +5,9 @@ using System.Text;
 namespace DinoDiner.Menu.Sides
 {
     /// <summary>
-    /// Represents the Fryceritops side.
+    /// Represents the Mezzorella Sticks side.
     /// </summary>
-    public class Fryceritops : Side 
+    public class MezzorellaSticks : Side
     {
         /// <summary>
         /// Stores the sizes of the sides.
@@ -26,15 +26,15 @@ namespace DinoDiner.Menu.Sides
                 {
                     case Size.Large:
                         Price = 1.95;
-                        Calories = 480;
+                        Calories = 720;
                         break;
                     case Size.Medium:
                         Price = 1.45;
-                        Calories = 365;
+                        Calories = 610;
                         break;
                     case Size.Small:
                         Price = 0.99;
-                        Calories = 222;
+                        Calories = 540;
                         break;
                 }
             }
@@ -43,14 +43,15 @@ namespace DinoDiner.Menu.Sides
                 return size;
             }
         }
+
         /// <summary>
-        /// Constructor for the Fryceritops side.
+        /// Constructor for the Mezzorella Sticks side.
         /// </summary>
-        public Fryceritops()
+        public MezzorellaSticks()
         {
             this.Price = 0.99;
-            this.Calories = 222;
-            this.Ingredients = new List<string>() { "Potato", "Salt", "Vegetable Oil" };
+            this.Calories = 540;
+            this.Ingredients = new List<string>() { "Cheese Product", "Breading", "Vegetable Oil" };
         }
     }
 }

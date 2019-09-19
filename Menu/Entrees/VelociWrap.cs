@@ -68,7 +68,7 @@ namespace DinoDiner.Menu.Entrees
         /// <summary>
         /// Method to hold the cheese.
         /// </summary>
-        public void holdCheese()
+        public void HoldCheese()
         {
             cheese = false;
         }

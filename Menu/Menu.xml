@@ -1,0 +1,399 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Menu</name>
+    </assembly>
+    <members>
+        <member name="T:DinoDiner.Menu.Entrees.Brontowurst">
+            <summary>
+            Class to represent the Brontowurst entree.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Price">
+            <summary>
+            Property that gets and sets the price of the brontowurst.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Calories">
+            <summary>
+            Property that gets and sets the calories of the brontowurst.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Ingredients">
+            <summary>
+            List to store the ingredients.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.Brontowurst.#ctor">
+            <summary>
+            Constructor for the Brontowurst class. Sets the price and calories.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.Brontowurst.HoldBun">
+            <summary>
+            Method to hold the bun.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.Brontowurst.HoldPeppers">
+            <summary>
+            Method to hold the peppers.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.Brontowurst.HoldOnion">
+            <summary>
+            Method to hold the onion.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Entrees.DinoNuggets">
+            <summary>
+            Represents the Dino Nuggets entree.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Price">
+            <summary>
+            Property that gets and sets the price.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Calories">
+            <summary>
+            Property that gets and sets the calories.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Ingredients">
+            <summary>
+            List to store the ingredients.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.DinoNuggets.#ctor">
+            <summary>
+            Constructor for the Dino Nuggets class. Sets the price and calories.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.DinoNuggets.AddNugget">
+            <summary>
+            Method to add a nugget to the entree. Increases the price and calories
+            for each nugget added.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Entrees.PrehistoricPBJ">
+            <summary>
+            Represents the Prehistoric PB and J entree.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Price">
+            <summary>
+            Property that gets and sets the price.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Calories">
+            <summary>
+            Property that gets and sets the calories.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Ingredients">
+            <summary>
+            List to store the ingredients.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.PrehistoricPBJ.#ctor">
+            <summary>
+            Constructor for the Prehistoric PB and J class. Sets the price and calories.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.PrehistoricPBJ.HoldPeanutButter">
+            <summary>
+            Method to hold the peanut butter.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.PrehistoricPBJ.HoldJelly">
+            <summary>
+            Method to hold the jelly.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Entrees.PterodactylWings">
+            <summary>
+            Represents the Pterodactyl Wings entree.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.PterodactylWings.Price">
+            <summary>
+            Property that gets and sets the price.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.PterodactylWings.Calories">
+            <summary>
+            Property that gets and sets the calories.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.PterodactylWings.Ingredients">
+            <summary>
+            List to store the ingredients.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.PterodactylWings.#ctor">
+            <summary>
+            Constructor for the Pterodactyl Wings class. Sets the price and calories.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Entrees.SteakosaurusBurger">
+            <summary>
+            Represents the Steakosaurus Burger.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.SteakosaurusBurger.Price">
+            <summary>
+            Property that gets and sets the price.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.SteakosaurusBurger.Calories">
+            <summary>
+            Property that gets and sets the calories.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.SteakosaurusBurger.Ingredients">
+            <summary>
+            List to store the ingredients.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.SteakosaurusBurger.#ctor">
+            <summary>
+            Constructor for the Steakosaurus Burger class. Sets the price and calories.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.SteakosaurusBurger.HoldBun">
+            <summary>
+            Method to hold the bun.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.SteakosaurusBurger.HoldPickle">
+            <summary>
+            Method to hold the pickle.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.SteakosaurusBurger.HoldKetchup">
+            <summary>
+            Method to hold the ketchup.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.SteakosaurusBurger.HoldMustard">
+            <summary>
+            Method to hold the mustard.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Entrees.TRexKingBurger">
+            <summary>
+            Class to represent the T-Rex King Burger entree.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.TRexKingBurger.Price">
+            <summary>
+            Property that gets and sets the price of the T-Rex King Burger.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.TRexKingBurger.Calories">
+            <summary>
+            Property that gets and sets the calories of the T-Rex King Burger.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.TRexKingBurger.Ingredients">
+            <summary>
+            List to store the ingredients.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.#ctor">
+            <summary>
+            Constructor for the T-Rex King Burger class. Sets the price and calories.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldBun">
+            <summary>
+            Method to hold the bun for the burger.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldLettuce">
+            <summary>
+            Method to hold the lettuce for the burger.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldTomato">
+            <summary>
+            Method to hold the tomato for the burger.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldOnion">
+            <summary>
+            Method to hold the onion for the burger.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldPickle">
+            <summary>
+            Method to hold the pickle for the burger.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldKetchup">
+            <summary>
+            Method to hold the ketchup for the burger.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldMustard">
+            <summary>
+            Method to hold the mustard for the burger.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldMayo">
+            <summary>
+            Method to hold the mayo for the burger.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Entrees.VelociWrap">
+            <summary>
+            Represents the Veloci-Wrap entree.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.VelociWrap.Price">
+            <summary>
+            Property that gets and sets the price.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.VelociWrap.Calories">
+            <summary>
+            Property that gets and sets the calories.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.VelociWrap.Ingredients">
+            <summary>
+            List to store the ingredients.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.VelociWrap.#ctor">
+            <summary>
+            Constructor for the Veloci-Wrap class. Sets the price and calories.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.VelociWrap.HoldDressing">
+            <summary>
+            Method to hold the dressing.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.VelociWrap.HoldLettuce">
+            <summary>
+            Method to hold the lettuce.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.VelociWrap.HoldCheese">
+            <summary>
+            Method to hold the cheese.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Sides.Fryceritops">
+            <summary>
+            Represents the Fryceritops side.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Sides.Fryceritops.size">
+            <summary>
+            Stores the sizes of the sides.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Fryceritops.Size">
+            <summary>
+            Gets and sets the price and calories based on the size of the side.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sides.Fryceritops.#ctor">
+            <summary>
+            Constructor for the Fryceritops side.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Sides.MeteorMacAndCheese">
+            <summary>
+            Represents the Meteor Mac and Cheese side.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Sides.MeteorMacAndCheese.size">
+            <summary>
+            Stores the sizes of the sides.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.MeteorMacAndCheese.Size">
+            <summary>
+            Gets and sets the price and calories based on the size of the side.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sides.MeteorMacAndCheese.#ctor">
+            <summary>
+            Constructor for the Meteor Mac and Cheese side.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Sides.MezzorellaSticks">
+            <summary>
+            Represents the Mezzorella Sticks side.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Sides.MezzorellaSticks.size">
+            <summary>
+            Stores the sizes of the sides.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.MezzorellaSticks.Size">
+            <summary>
+            Gets and sets the price and calories based on the size of the side.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sides.MezzorellaSticks.#ctor">
+            <summary>
+            Constructor for the Mezzorella Sticks side.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Sides.Size">
+            <summary>
+            Enumerator representing the sizes for the sides.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Sides.Side">
+            <summary>
+            Abstract class that represents the sides.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Side.Price">
+            <summary>
+            Gets and sets the price
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Side.Calories">
+            <summary>
+            Gets and sets the calories
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Side.Ingredients">
+            <summary>
+            Gets the ingredients list
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Side.Size">
+            <summary>
+            Gets or sets the size
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Sides.Triceritots">
+            <summary>
+            Represents the Triceritots side.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Sides.Triceritots.size">
+            <summary>
+            Stores the sizes of the sides.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Triceritots.Size">
+            <summary>
+            Gets and sets the price and calories based on the size of the side.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sides.Triceritots.#ctor">
+            <summary>
+            Constructor for the Triceritots side.
+            </summary>
+        </member>
+    </members>
+</doc>
