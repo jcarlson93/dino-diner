@@ -8,7 +8,7 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Class to represent the Brontowurst entree.
     /// </summary>
-    public class Brontowurst
+    public class Brontowurst : Entree
     {
         // Tells if the ingredients are on the Brontowurst.
         private bool bun = true;
@@ -16,18 +16,9 @@ namespace DinoDiner.Menu.Entrees
         private bool onions = true;
 
         /// <summary>
-        /// Property that gets and sets the price of the brontowurst.
-        /// </summary>
-        public double Price { get; set; }
-        /// <summary>
-        /// Property that gets and sets the calories of the brontowurst.
-        /// </summary>
-        public uint Calories { get; set; }
-
-        /// <summary>
         /// List to store the ingredients.
         /// </summary>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {

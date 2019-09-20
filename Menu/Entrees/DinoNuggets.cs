@@ -8,26 +8,22 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Represents the Dino Nuggets entree.
     /// </summary>
-    public class DinoNuggets
+    public class DinoNuggets : Entree
     {
         /// <summary>
-        /// Property that gets and sets the price.
+        /// Stores the amount of nuggets in the entree.
         /// </summary>
-        public double Price { get; set; }
-        /// <summary>
-        /// Property that gets and sets the calories.
-        /// </summary>
-        public uint Calories { get; set; }
+        private uint nuggetCount;
 
         /// <summary>
         /// List to store the ingredients.
         /// </summary>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {
                 List<string> ingredients = new List<string>();
-                for (int i = 0; i < 6; i++)
+                for (int i = 0; i < nuggetCount; i++)
                 {
                     ingredients.Add("Chicken Nugget");
                 }
@@ -40,8 +36,9 @@ namespace DinoDiner.Menu.Entrees
         /// </summary>
         public DinoNuggets()
         {
+            this.nuggetCount = 6;
             this.Price = 4.25;
-            this.Calories = 6 * 59;
+            this.Calories = nuggetCount * 59;
         }
 
         /// <summary>
@@ -50,6 +47,7 @@ namespace DinoDiner.Menu.Entrees
         /// </summary>
         public void AddNugget()
         {
+            nuggetCount++;
             Ingredients.Add("Chicken Nugget");
             Price += 0.25;
             Calories += 59;

@@ -9,16 +9,6 @@
             Class to represent the Brontowurst entree.
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Price">
-            <summary>
-            Property that gets and sets the price of the brontowurst.
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Calories">
-            <summary>
-            Property that gets and sets the calories of the brontowurst.
-            </summary>
-        </member>
         <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Ingredients">
             <summary>
             List to store the ingredients.
@@ -49,14 +39,9 @@
             Represents the Dino Nuggets entree.
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Price">
+        <member name="F:DinoDiner.Menu.Entrees.DinoNuggets.nuggetCount">
             <summary>
-            Property that gets and sets the price.
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Calories">
-            <summary>
-            Property that gets and sets the calories.
+            Stores the amount of nuggets in the entree.
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Ingredients">
@@ -75,19 +60,29 @@
             for each nugget added.
             </summary>
         </member>
+        <member name="T:DinoDiner.Menu.Entrees.Entree">
+            <summary>
+            Abstract class that represents the Entrees.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.Entree.Price">
+            <summary>
+            Gets and sets the Price.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.Entree.Calories">
+            <summary>
+            Gets and sets the Calories.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.Entree.Ingredients">
+            <summary>
+            Gets the ingredient list.
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Entrees.PrehistoricPBJ">
             <summary>
             Represents the Prehistoric PB and J entree.
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Price">
-            <summary>
-            Property that gets and sets the price.
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Calories">
-            <summary>
-            Property that gets and sets the calories.
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Ingredients">
@@ -115,16 +110,6 @@
             Represents the Pterodactyl Wings entree.
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.PterodactylWings.Price">
-            <summary>
-            Property that gets and sets the price.
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.PterodactylWings.Calories">
-            <summary>
-            Property that gets and sets the calories.
-            </summary>
-        </member>
         <member name="P:DinoDiner.Menu.Entrees.PterodactylWings.Ingredients">
             <summary>
             List to store the ingredients.
@@ -138,16 +123,6 @@
         <member name="T:DinoDiner.Menu.Entrees.SteakosaurusBurger">
             <summary>
             Represents the Steakosaurus Burger.
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.SteakosaurusBurger.Price">
-            <summary>
-            Property that gets and sets the price.
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.SteakosaurusBurger.Calories">
-            <summary>
-            Property that gets and sets the calories.
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Entrees.SteakosaurusBurger.Ingredients">
@@ -183,16 +158,6 @@
         <member name="T:DinoDiner.Menu.Entrees.TRexKingBurger">
             <summary>
             Class to represent the T-Rex King Burger entree.
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.TRexKingBurger.Price">
-            <summary>
-            Property that gets and sets the price of the T-Rex King Burger.
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.TRexKingBurger.Calories">
-            <summary>
-            Property that gets and sets the calories of the T-Rex King Burger.
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Entrees.TRexKingBurger.Ingredients">
@@ -248,16 +213,6 @@
         <member name="T:DinoDiner.Menu.Entrees.VelociWrap">
             <summary>
             Represents the Veloci-Wrap entree.
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.VelociWrap.Price">
-            <summary>
-            Property that gets and sets the price.
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Entrees.VelociWrap.Calories">
-            <summary>
-            Property that gets and sets the calories.
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Entrees.VelociWrap.Ingredients">

@@ -8,7 +8,7 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Class to represent the T-Rex King Burger entree.
     /// </summary>
-    public class TRexKingBurger
+    public class TRexKingBurger : Entree
     {
         // Tells if the ingredients are on the burger.
         private bool bun = true;
@@ -21,18 +21,9 @@ namespace DinoDiner.Menu.Entrees
         private bool mayo = true;
 
         /// <summary>
-        /// Property that gets and sets the price of the T-Rex King Burger.
-        /// </summary>
-        public double Price { get; set; }
-        /// <summary>
-        /// Property that gets and sets the calories of the T-Rex King Burger.
-        /// </summary>
-        public uint Calories { get; set; }
-
-        /// <summary>
         /// List to store the ingredients.
         /// </summary>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {

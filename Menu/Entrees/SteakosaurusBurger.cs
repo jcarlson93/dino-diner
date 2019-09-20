@@ -8,7 +8,7 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Represents the Steakosaurus Burger.
     /// </summary>
-    public class SteakosaurusBurger
+    public class SteakosaurusBurger : Entree
     {
         // Tells whether the ingredients are on the burger or not.
         private bool bun = true;
@@ -17,18 +17,9 @@ namespace DinoDiner.Menu.Entrees
         private bool mustard = true;
 
         /// <summary>
-        /// Property that gets and sets the price.
-        /// </summary>
-        public double Price { get; set; }
-        /// <summary>
-        /// Property that gets and sets the calories.
-        /// </summary>
-        public uint Calories { get; set; }
-
-        /// <summary>
         /// List to store the ingredients.
         /// </summary>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {

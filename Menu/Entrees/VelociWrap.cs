@@ -8,7 +8,7 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Represents the Veloci-Wrap entree.
     /// </summary>
-    public class VelociWrap
+    public class VelociWrap : Entree
     {
         // Tells whether or not the ingredients are on the wrap.
         private bool lettuce = true;
@@ -16,18 +16,9 @@ namespace DinoDiner.Menu.Entrees
         private bool cheese = true;
 
         /// <summary>
-        /// Property that gets and sets the price.
-        /// </summary>
-        public double Price { get; set; }
-        /// <summary>
-        /// Property that gets and sets the calories.
-        /// </summary>
-        public uint Calories { get; set; }
-
-        /// <summary>
         /// List to store the ingredients.
         /// </summary>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {
