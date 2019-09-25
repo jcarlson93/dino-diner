@@ -4,6 +4,121 @@
         <name>Menu</name>
     </assembly>
     <members>
+        <member name="T:DinoDiner.Menu.Drinks.Drink">
+            <summary>
+            Abstract class representing the drinks.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Size">
+            <summary>
+            Gets or sets the size.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Ice">
+            <summary>
+            Tells whether the drink has ice or not.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Price">
+            <summary>
+            Gets and sets the price
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Calories">
+            <summary>
+            Gets and sets the calories
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Ingredients">
+            <summary>
+            Gets the ingredient list.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Drink.HoldIce">
+            <summary>
+            Method to hold the ice for a drink.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Drinks.Sodasaurus">
+            <summary>
+            Represents the Sodasaurus drink.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Sodasaurus.flavor">
+            <summary>
+            Stores the flavor of the sodasaurus drink.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Sodasaurus.size">
+            <summary>
+            Stores the size of the sodasaurus drink.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Sodasaurus.Flavor">
+            <summary>
+            Gets and sets the flavor of the sodasaurus drink.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Sodasaurus.Size">
+            <summary>
+            Gets and sets the price and calories based on the size of the drink.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Sodasaurus.Ingredients">
+            <summary>
+            Stores the ingredients of the sodasaurus drink.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Sodasaurus.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Drinks.SodasaurusFlavor">
+            <summary>
+            Enumerator for the sodasaurus drink flavors.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Drinks.Tyrannotea">
+            <summary>
+            Represents the Tyrannotea drink.
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Tyrannotea.size">
+            <summary>
+            Stores the size of the Tyrannotea drink.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Tyrannotea.Sweet">
+            <summary>
+            Tells whether the tyrannotea is sweet or not.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Tyrannotea.Lemon">
+            <summary>
+            Tells whether the tyrannotea has lemon or not.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Tyrannotea.Size">
+            <summary>
+            Gets and sets the price and calories based on the size of the drink.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Tyrannotea.Ingredients">
+            <summary>
+            Stores the ingredients of the tyrannotea.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Tyrannotea.#ctor">
+            <summary>
+            Constructor for the tyrannotea drink.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Tyrannotea.AddLemon">
+            <summary>
+            Adds the lemon to tyrannotea drink.
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Entrees.Brontowurst">
             <summary>
             Class to represent the Brontowurst entree.
@@ -348,6 +463,11 @@
         <member name="M:DinoDiner.Menu.Sides.Triceritots.#ctor">
             <summary>
             Constructor for the Triceritots side.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Size">
+            <summary>
+            Represents the sizes of drinks and sides.
             </summary>
         </member>
     </members>

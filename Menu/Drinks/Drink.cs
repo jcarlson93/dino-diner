@@ -5,27 +5,6 @@ using System.Text;
 namespace DinoDiner.Menu.Drinks
 {
     /// <summary>
-    /// Enumerator for the drink flavors.
-    /// </summary>
-    public enum SodaSaurusFlavor
-    {
-        Cola,
-        Orange,
-        Vanilla,
-        Chocolate,
-        RootBeer,
-        Cherry,
-        Lime
-    }
-
-    public enum Size
-    {
-        Small,
-        Medium,
-        Large
-    }
-
-    /// <summary>
     /// Abstract class representing the drinks.
     /// </summary>
     public abstract class Drink
