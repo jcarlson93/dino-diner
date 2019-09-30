@@ -132,7 +132,7 @@ namespace MenuTest.Drinks
         }
 
         /// <summary>
-        /// Checks the Ice property after invoking the AddIce() function.
+        /// Checks the Ice property after invoking the AddIce() method.
         /// </summary>
         [Fact]
         public void AddTheIce()
@@ -142,6 +142,9 @@ namespace MenuTest.Drinks
             Assert.True(java.Ice);
         }
 
+        /// <summary>
+        /// Checks the RoomForCream property after invoking the LeaveRoomForCream() method.
+        /// </summary>
         [Fact]
         public void LeaveRoomForTheCream()
         {
@@ -156,10 +159,10 @@ namespace MenuTest.Drinks
         [Fact]
         public void ShouldHaveCorrectIngredients()
         {
-            Sodasaurus soda = new Sodasaurus();
-            Assert.Contains<string>("Water", soda.Ingredients);
-            Assert.Contains<string>("Coffee", soda.Ingredients);
-            Assert.Equal<int>(2, soda.Ingredients.Count);
+            JurrasicJava java = new JurrasicJava();
+            Assert.Contains<string>("Water", java.Ingredients);
+            Assert.Contains<string>("Coffee", java.Ingredients);
+            Assert.Equal<int>(2, java.Ingredients.Count);
         }
     }
 }

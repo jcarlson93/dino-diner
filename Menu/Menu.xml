@@ -39,6 +39,46 @@
             Method to hold the ice for a drink.
             </summary>
         </member>
+        <member name="T:DinoDiner.Menu.Drinks.JurrasicJava">
+            <summary>
+            Represents the Jurrasic Java drink.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.JurrasicJava.RoomForCream">
+            <summary>
+            Property for specifying if room for cream is needed.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.JurrasicJava.Decaf">
+            <summary>
+            Property for specifying if the Jurrasic Java is decaf.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.JurrasicJava.Size">
+            <summary>
+            Gets and sets the price and calories based on the size of the drink.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.JurrasicJava.Ingredients">
+            <summary>
+            Stores the ingredients of the sodasaurus drink.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.JurrasicJava.#ctor">
+            <summary>
+            Constructor for the Jurrasic Java drink.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.JurrasicJava.LeaveRoomForCream">
+            <summary>
+            Method for leaving room for cream.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.JurrasicJava.AddIce">
+            <summary>
+            Method for adding ice.
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Drinks.Sodasaurus">
             <summary>
             Represents the Sodasaurus drink.
@@ -117,6 +157,36 @@
         <member name="M:DinoDiner.Menu.Drinks.Tyrannotea.AddLemon">
             <summary>
             Adds the lemon to tyrannotea drink.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Drinks.Water">
+            <summary>
+            Represents the water drink.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Water.Lemon">
+            <summary>
+            Determines if there is lemon in the water.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Water.Size">
+            <summary>
+            Gets and sets the price and calories based on the size of the drink.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Water.Ingredients">
+            <summary>
+            Stores the ingredients of the sodasaurus drink.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Water.#ctor">
+            <summary>
+            Constructor for the Water class.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Water.AddLemon">
+            <summary>
+            Method to add lemon to the water.
             </summary>
         </member>
         <member name="T:DinoDiner.Menu.Entrees.Brontowurst">
