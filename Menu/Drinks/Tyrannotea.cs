@@ -37,17 +37,26 @@ namespace DinoDiner.Menu.Drinks
                     case Size.Large:
                         Price = 1.99;
                         Calories = 32;
-                        if (Sweet) Calories *= 2;
+                        if (Sweet)
+                        {
+                            Calories *= 2;
+                        }
                         break;
                     case Size.Medium:
                         Price = 1.49;
                         Calories = 16;
-                        if (Sweet) Calories *= 2;
+                        if (Sweet)
+                        {
+                            Calories *= 2;
+                        }
                         break;
                     case Size.Small:
                         Price = 0.99;
                         Calories = 8;
-                        if (Sweet) Calories *= 2;
+                        if (Sweet)
+                        {
+                            Calories *= 2;
+                        }
                         break;
                 }
             }

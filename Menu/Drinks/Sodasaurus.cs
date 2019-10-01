@@ -26,7 +26,7 @@ namespace DinoDiner.Menu.Drinks
         {
             get
             {
-                return SodasaurusFlavor.Cherry;
+                return flavor;
             }
             set
             {
