@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Jurrasic Java Test Class
+ * Author: Jake Carlson
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
