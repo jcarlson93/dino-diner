@@ -53,5 +53,14 @@ namespace DinoDiner.Menu
             this.Calories = 352;
             this.Ingredients = new List<string>() { "Potato", "Salt", "Vegetable Oil" };
         }
+
+        /// <summary>
+        /// Overrides the ToString() method.
+        /// </summary>
+        /// <returns>The name of the Menu Item.</returns>
+        public override string ToString()
+        {
+            return $"{size} Triceritots";
+        }
     }
 }

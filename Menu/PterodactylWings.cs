@@ -31,5 +31,14 @@ namespace DinoDiner.Menu
             this.Price = 7.21;
             this.Calories = 318;
         }
+
+        /// <summary>
+        /// Overrides the ToString() method.
+        /// </summary>
+        /// <returns>The name of the Menu Item.</returns>
+        public override string ToString()
+        {
+            return "Pterodactyl Wings";
+        }
     }
 }

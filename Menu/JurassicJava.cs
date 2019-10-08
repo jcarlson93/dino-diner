@@ -1,4 +1,4 @@
-﻿/* Jurrasic Java Class
+﻿/* Jurassic Java Class
  * Author: Jake Carlson
 */
 
@@ -9,11 +9,11 @@ using System.Text;
 namespace DinoDiner.Menu
 {
     /// <summary>
-    /// Represents the Jurrasic Java drink.
+    /// Represents the Jurassic Java drink.
     /// </summary>
-    public class JurrasicJava : Drink, IMenuItem
+    public class JurassicJava : Drink, IMenuItem
     {
-        // Holds the size of the Jurrasic Java drink.
+        // Holds the size of the Jurassic Java drink.
         private Size size;
 
         /// <summary>
@@ -22,7 +22,7 @@ namespace DinoDiner.Menu
         public bool RoomForCream { get; set; } = false;
 
         /// <summary>
-        /// Property for specifying if the Jurrasic Java is decaf.
+        /// Property for specifying if the Jurassic Java is decaf.
         /// </summary>
         public bool Decaf { get; set; } = false;
 
@@ -68,9 +68,9 @@ namespace DinoDiner.Menu
         }
 
         /// <summary>
-        /// Constructor for the Jurrasic Java drink.
+        /// Constructor for the Jurassic Java drink.
         /// </summary>
-        public JurrasicJava()
+        public JurassicJava()
         {
             this.size = Size.Small;
             this.Price = 0.59;
@@ -92,6 +92,22 @@ namespace DinoDiner.Menu
         public void AddIce()
         {
             this.Ice = true;
+        }
+
+        /// <summary>
+        /// Overrides the ToString() method.
+        /// </summary>
+        /// <returns>The name of the Menu Item.</returns>
+        public override string ToString()
+        {
+            if (Decaf)
+            {
+                return $"{size} Decaf Jurassic Java";
+            }
+            else
+            {
+                return $"{size} Jurassic Java";
+            }
         }
     }
 }
