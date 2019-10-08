@@ -8,7 +8,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Class to represent the Brontowurst entree.
     /// </summary>
-    public class Brontowurst : Entree
+    public class Brontowurst : Entree, IMenuItem
     {
         // Tells if the ingredients are on the Brontowurst.
         private bool bun = true;

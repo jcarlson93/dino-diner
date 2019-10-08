@@ -8,7 +8,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Represents the Steakosaurus Burger.
     /// </summary>
-    public class SteakosaurusBurger : Entree
+    public class SteakosaurusBurger : Entree, IMenuItem
     {
         // Tells whether the ingredients are on the burger or not.
         private bool bun = true;

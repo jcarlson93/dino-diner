@@ -11,7 +11,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Represents the Tyrannotea drink.
     /// </summary>
-    public class Tyrannotea : Drink
+    public class Tyrannotea : Drink, IMenuItem
     {
         /// <summary>
         /// Stores the size of the Tyrannotea drink.

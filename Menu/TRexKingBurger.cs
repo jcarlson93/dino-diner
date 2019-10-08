@@ -8,7 +8,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Class to represent the T-Rex King Burger entree.
     /// </summary>
-    public class TRexKingBurger : Entree
+    public class TRexKingBurger : Entree, IMenuItem
     {
         // Tells if the ingredients are on the burger.
         private bool bun = true;

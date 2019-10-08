@@ -7,7 +7,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Represents the Fryceritops side.
     /// </summary>
-    public class Fryceritops : Side 
+    public class Fryceritops : Side, IMenuItem
     {
         /// <summary>
         /// Stores the sizes of the sides.

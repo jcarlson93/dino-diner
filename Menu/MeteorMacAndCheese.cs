@@ -7,7 +7,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Represents the Meteor Mac and Cheese side.
     /// </summary>
-    public class MeteorMacAndCheese : Side
+    public class MeteorMacAndCheese : Side, IMenuItem
     {
         /// <summary>
         /// Stores the sizes of the sides.

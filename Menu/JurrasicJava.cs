@@ -11,7 +11,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Represents the Jurrasic Java drink.
     /// </summary>
-    public class JurrasicJava : Drink
+    public class JurrasicJava : Drink, IMenuItem
     {
         // Holds the size of the Jurrasic Java drink.
         private Size size;

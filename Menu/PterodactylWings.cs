@@ -8,7 +8,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Represents the Pterodactyl Wings entree.
     /// </summary>
-    public class PterodactylWings : Entree
+    public class PterodactylWings : Entree, IMenuItem
     {
         /// <summary>
         /// List to store the ingredients.

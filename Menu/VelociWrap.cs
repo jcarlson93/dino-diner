@@ -8,7 +8,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Represents the Veloci-Wrap entree.
     /// </summary>
-    public class VelociWrap : Entree
+    public class VelociWrap : Entree, IMenuItem
     {
         // Tells whether or not the ingredients are on the wrap.
         private bool lettuce = true;

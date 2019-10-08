@@ -11,7 +11,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Represents the water drink.
     /// </summary>
-    public class Water : Drink
+    public class Water : Drink, IMenuItem
     {
         // Stores the size of the water.
         private Size size;

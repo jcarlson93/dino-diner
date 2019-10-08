@@ -7,7 +7,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Represents the Mezzorella Sticks side.
     /// </summary>
-    public class MezzorellaSticks : Side
+    public class MezzorellaSticks : Side, IMenuItem
     {
         /// <summary>
         /// Stores the sizes of the sides.

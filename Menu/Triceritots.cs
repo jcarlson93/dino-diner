@@ -7,7 +7,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Represents the Triceritots side.
     /// </summary>
-    public class Triceritots : Side
+    public class Triceritots : Side, IMenuItem
     {
         /// <summary>
         /// Stores the sizes of the sides.

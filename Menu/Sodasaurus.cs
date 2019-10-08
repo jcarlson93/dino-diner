@@ -11,7 +11,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Represents the Sodasaurus drink.
     /// </summary>
-    public class Sodasaurus : Drink
+    public class Sodasaurus : Drink, IMenuItem
     {
         /// <summary>
         /// Stores the flavor of the sodasaurus drink.
