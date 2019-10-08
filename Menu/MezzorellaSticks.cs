@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Sides
+namespace DinoDiner.Menu
 {
     /// <summary>
-    /// Represents the Meteor Mac and Cheese side.
+    /// Represents the Mezzorella Sticks side.
     /// </summary>
-    public class MeteorMacAndCheese : Side
+    public class MezzorellaSticks : Side
     {
         /// <summary>
         /// Stores the sizes of the sides.
@@ -26,15 +26,15 @@ namespace DinoDiner.Menu.Sides
                 {
                     case Size.Large:
                         Price = 1.95;
-                        Calories = 520;
+                        Calories = 720;
                         break;
                     case Size.Medium:
                         Price = 1.45;
-                        Calories = 490;
+                        Calories = 610;
                         break;
                     case Size.Small:
                         Price = 0.99;
-                        Calories = 420;
+                        Calories = 540;
                         break;
                 }
             }
@@ -45,13 +45,13 @@ namespace DinoDiner.Menu.Sides
         }
 
         /// <summary>
-        /// Constructor for the Meteor Mac and Cheese side.
+        /// Constructor for the Mezzorella Sticks side.
         /// </summary>
-        public MeteorMacAndCheese()
+        public MezzorellaSticks()
         {
             this.Price = 0.99;
-            this.Calories = 420;
-            this.Ingredients = new List<string>() { "Macaroni Noodles", "Cheese Product", "Pork Sausage" };
+            this.Calories = 540;
+            this.Ingredients = new List<string>() { "Cheese Product", "Breading", "Vegetable Oil" };
         }
     }
 }

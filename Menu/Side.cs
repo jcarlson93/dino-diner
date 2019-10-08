@@ -2,18 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Sides
+namespace DinoDiner.Menu
 {
-    /// <summary>
-    /// Enumerator representing the sizes for the sides.
-    /// </summary>
-    public enum Size
-    {
-        Small,
-        Medium, 
-        Large
-    }
-
     /// <summary>
     /// Abstract class that represents the sides.
     /// </summary>
