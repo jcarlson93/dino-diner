@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Meteor Mac and Cheese Class
+ * Author: Jake Carlson
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 

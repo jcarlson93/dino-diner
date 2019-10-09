@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Triceritots Class
+ * Author: Jake Carlson
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
