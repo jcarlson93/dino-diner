@@ -43,6 +43,18 @@ namespace DinoDiner.Menu
                 return size;
             }
         }
+
+        /// <summary>
+        /// Stores the ingredients of the Fryceritops side.
+        /// </summary>
+        public override List<string> Ingredients
+        {
+            get
+            {
+                return new List<string>() { "Potato", "Salt", "Vegetable Oil" };
+            }
+        }
+
         /// <summary>
         /// Constructor for the Fryceritops side.
         /// </summary>
@@ -50,7 +62,6 @@ namespace DinoDiner.Menu
         {
             this.Price = 0.99;
             this.Calories = 222;
-            this.Ingredients = new List<string>() { "Potato", "Salt", "Vegetable Oil" };
         }
 
         /// <summary>

@@ -45,13 +45,23 @@ namespace DinoDiner.Menu
         }
 
         /// <summary>
+        /// Stores the ingredients of the Mezzorella Sticks side.
+        /// </summary>
+        public override List<string> Ingredients
+        {
+            get
+            {
+                return new List<string>() { "Cheese Product", "Breading", "Vegetable Oil" };
+            }
+        }
+
+        /// <summary>
         /// Constructor for the Mezzorella Sticks side.
         /// </summary>
         public MezzorellaSticks()
         {
             this.Price = 0.99;
             this.Calories = 540;
-            this.Ingredients = new List<string>() { "Cheese Product", "Breading", "Vegetable Oil" };
         }
 
         /// <summary>

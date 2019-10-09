@@ -194,6 +194,11 @@
             Gets and sets the price and calories based on the size of the side.
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Fryceritops.Ingredients">
+            <summary>
+            Stores the ingredients of the Fryceritops side.
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.Fryceritops.#ctor">
             <summary>
             Constructor for the Fryceritops side.
@@ -286,6 +291,11 @@
             Gets and sets the price and calories based on the size of the side.
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.MeteorMacAndCheese.Ingredients">
+            <summary>
+            Stores the ingredients of the Meteor Mac and Cheese side.
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.MeteorMacAndCheese.#ctor">
             <summary>
             Constructor for the Meteor Mac and Cheese side.
@@ -310,6 +320,11 @@
         <member name="P:DinoDiner.Menu.MezzorellaSticks.Size">
             <summary>
             Gets and sets the price and calories based on the size of the side.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.MezzorellaSticks.Ingredients">
+            <summary>
+            Stores the ingredients of the Mezzorella Sticks side.
             </summary>
         </member>
         <member name="M:DinoDiner.Menu.MezzorellaSticks.#ctor">
@@ -566,6 +581,11 @@
         <member name="P:DinoDiner.Menu.Triceritots.Size">
             <summary>
             Gets and sets the price and calories based on the size of the side.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Triceritots.Ingredients">
+            <summary>
+            Stores the ingredients of the Triceritots side.
             </summary>
         </member>
         <member name="M:DinoDiner.Menu.Triceritots.#ctor">

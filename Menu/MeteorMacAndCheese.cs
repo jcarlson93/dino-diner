@@ -45,13 +45,23 @@ namespace DinoDiner.Menu
         }
 
         /// <summary>
+        /// Stores the ingredients of the Meteor Mac and Cheese side.
+        /// </summary>
+        public override List<string> Ingredients
+        {
+            get
+            {
+                return new List<string>() { "Macaroni Noodles", "Cheese Product", "Pork Sausage" };
+            }
+        }
+
+        /// <summary>
         /// Constructor for the Meteor Mac and Cheese side.
         /// </summary>
         public MeteorMacAndCheese()
         {
             this.Price = 0.99;
             this.Calories = 420;
-            this.Ingredients = new List<string>() { "Macaroni Noodles", "Cheese Product", "Pork Sausage" };
         }
 
         /// <summary>

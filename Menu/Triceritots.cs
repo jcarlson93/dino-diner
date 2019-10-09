@@ -45,13 +45,23 @@ namespace DinoDiner.Menu
         }
 
         /// <summary>
+        /// Stores the ingredients of the Triceritots side.
+        /// </summary>
+        public override List<string> Ingredients
+        {
+            get
+            {
+                return new List<string>() { "Potato", "Salt", "Vegetable Oil" };
+            }
+        }
+
+        /// <summary>
         /// Constructor for the Triceritots side.
         /// </summary>
         public Triceritots()
         {
             this.Price = 0.99;
             this.Calories = 352;
-            this.Ingredients = new List<string>() { "Potato", "Salt", "Vegetable Oil" };
         }
 
         /// <summary>
