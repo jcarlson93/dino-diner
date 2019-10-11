@@ -276,6 +276,42 @@
             </summary>
             <returns>The name of the Menu Item.</returns>
         </member>
+        <member name="T:DinoDiner.Menu.Menu">
+            <summary>
+            Represents the Menu for the Dino Diner.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Menu.AvailableMenuItems">
+            <summary>
+            Gets a list of the available menu items.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Menu.AvailableEntrees">
+            <summary>
+            Gets a list of the available entree items.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Menu.AvailableSides">
+            <summary>
+            Gets a list of the available side items.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Menu.AvailableDrinks">
+            <summary>
+            Gets a list of the available drink items.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Menu.AvailableCombos">
+            <summary>
+            Gets a list of the available combos.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Menu.ToString">
+            <summary>
+            Overrides the ToString() method.
+            </summary>
+            <returns>The full menu contents.</returns>
+        </member>
         <member name="T:DinoDiner.Menu.MeteorMacAndCheese">
             <summary>
             Represents the Meteor Mac and Cheese side.
