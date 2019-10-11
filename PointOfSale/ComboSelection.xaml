@@ -16,12 +16,33 @@
             </Style>
         </WrapPanel.Resources>
         
-        <Button>Brontowurst Combo</Button>
-        <Button>Dino-Nuggets Combo</Button>
+        <Button>
+            <StackPanel>
+                <Image Source="Assets/DinoDiner-01.png" Width="120"/>
+                <TextBlock>Brontowurst Combo</TextBlock>
+            </StackPanel>
+        </Button>
+        <Button>
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/DinoDiner-02.png"></ImageBrush>
+            </Button.Background>
+            Dino-Nuggets Combo
+        </Button>
         <Button>Prehistoric PB&amp;J Combo</Button>
         <Button>Pterodactyl Wings Combo</Button>
-        <Button>Steakosaurus Burger Combo</Button>
-        <Button>T-Rex King Burger Combo</Button>
+        <Button>
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/DinoDiner-05.png"/>
+            </Button.Background>
+            <DockPanel Height="150">
+                <TextBlock DockPanel.Dock="Bottom">
+                    Steakosaurus Burger Combo
+                </TextBlock>
+            </DockPanel>
+        </Button>
+        <Button BorderThickness="4" BorderBrush="Black" Background="Transparent">
+            T-Rex King Burger Combo
+        </Button>
         <Button>Veloci-Wrap Combo</Button>
     </WrapPanel>
 </Page>
