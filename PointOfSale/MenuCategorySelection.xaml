@@ -11,9 +11,14 @@
     <Grid>
         <Grid.Resources>
             <Style TargetType="Button">
-                <Setter Property="Margin" Value="5"/>
+                <Setter Property="Margin" Value="25"/>
                 <Setter Property="BorderThickness" Value="2"/>
                 <Setter Property="BorderBrush" Value="Black"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="FontWeight" Value="SemiBold"/>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="16"/>
             </Style>
         </Grid.Resources>
         <Grid.ColumnDefinitions>
@@ -21,12 +26,14 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height=".20*"/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button Click="SelectCombo" Grid.Row="0" Grid.Column="0">Combos</Button>
-        <Button Click="SelectEntree" Grid.Row="0" Grid.Column="1">Entrees</Button>
-        <Button Grid.Row="1" Grid.Column="0">Sides</Button>
-        <Button Grid.Row="1" Grid.Column="1">Drinks</Button>
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top">Add To Order</Label>
+        <Button Click="SelectCombo" Grid.Row="1" Grid.Column="0">Combos</Button>
+        <Button Click="SelectEntree" Grid.Row="1" Grid.Column="1">Entrees</Button>
+        <Button Click="SelectSide" Grid.Row="2" Grid.Column="0">Sides</Button>
+        <Button Click="SelectDrink" Grid.Row="2" Grid.Column="1">Drinks</Button>
     </Grid>
 </Page>
