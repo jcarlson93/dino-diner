@@ -31,6 +31,32 @@ namespace DinoDiner.Menu
         }
 
         /// <summary>
+        /// Gets a description of this menu item.
+        /// </summary>
+        public string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
+        /// <summary>
+        /// Gets any special instructions for this menu item.
+        /// </summary>
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (!bun) special.Add("Hold Bun");
+                if (!peppers) special.Add("Hold Peppers");
+                if (!onions) special.Add("Hold Onions");
+                return special.ToArray();
+            }
+        }
+
+        /// <summary>
         /// Constructor for the Brontowurst class. Sets the price and calories.
         /// </summary>
         public Brontowurst()
@@ -45,6 +71,8 @@ namespace DinoDiner.Menu
         public void HoldBun()
         {
             bun = false;
+            NotifyOfPropertyChange("Special");
+            NotifyOfPropertyChange("Ingredients");
         }
 
         /// <summary>
@@ -53,6 +81,8 @@ namespace DinoDiner.Menu
         public void HoldPeppers()
         {
             peppers = false;
+            NotifyOfPropertyChange("Special");
+            NotifyOfPropertyChange("Ingredients");
         }
 
         /// <summary>
@@ -61,6 +91,8 @@ namespace DinoDiner.Menu
         public void HoldOnion()
         {
             onions = false;
+            NotifyOfPropertyChange("Special");
+            NotifyOfPropertyChange("Ingredients");
         }
 
         /// <summary>

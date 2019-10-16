@@ -92,6 +92,11 @@
             </summary>
             <returns>The name of the Menu Item.</returns>
         </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Description">
+            <summary>
+            Gets a description of this menu item.
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.DinoNuggets">
             <summary>
             Represents the Dino Nuggets entree.
@@ -154,6 +159,17 @@
             Gets the ingredient list.
             </summary>
         </member>
+        <member name="E:DinoDiner.Menu.Drink.PropertyChanged">
+            <summary>
+            The PropertyChanged event handler; notifies of changes to the Price, Description, and Special properties.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drink.NotifyOfPropertyChange(System.String)">
+            <summary>
+            Helper function for notifying of property changes.
+            </summary>
+            <param name="propertyName"></param>
+        </member>
         <member name="M:DinoDiner.Menu.Drink.HoldIce">
             <summary>
             Method to hold the ice for a drink.
@@ -178,6 +194,17 @@
             <summary>
             Gets the ingredient list.
             </summary>
+        </member>
+        <member name="E:DinoDiner.Menu.Entree.PropertyChanged">
+            <summary>
+            The PropertyChanged event handler; notifies of changes to the Price, Description, and Special properties.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entree.NotifyOfPropertyChange(System.String)">
+            <summary>
+            Helper function for notifying of property changes.
+            </summary>
+            <param name="propertyName"></param>
         </member>
         <member name="T:DinoDiner.Menu.Fryceritops">
             <summary>
@@ -379,6 +406,16 @@
             Represents the Prehistoric PB and J entree.
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.PrehistoricPBJ.Description">
+            <summary>
+            Gets and sets the description.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.PrehistoricPBJ.Special">
+            <summary>
+            Gets any special preparation instructions.
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.PrehistoricPBJ.Ingredients">
             <summary>
             List to store the ingredients.
@@ -451,6 +488,17 @@
             Gets or sets the size
             </summary>
         </member>
+        <member name="E:DinoDiner.Menu.Side.PropertyChanged">
+            <summary>
+            The PropertyChanged event handler; notifies of changes to the Price, Description, and Special properties.
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Side.NotifyOfPropertyChange(System.String)">
+            <summary>
+            Helper function for notifying of property changes.
+            </summary>
+            <param name="propertyName"></param>
+        </member>
         <member name="T:DinoDiner.Menu.Size">
             <summary>
             Represents the sizes of drinks and sides.
@@ -486,9 +534,19 @@
             Stores the ingredients of the sodasaurus drink.
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Sodasaurus.Description">
+            <summary>
+            Gets a description of this order item.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sodasaurus.Special">
+            <summary>
+            Gets any special instructions for this order item
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.Sodasaurus.#ctor">
             <summary>
-            
+            Constructor for the Sodasaurus class.
             </summary>
         </member>
         <member name="M:DinoDiner.Menu.Sodasaurus.ToString">
