@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Interface for the Order Item class.
+ * Author: Jake Carlson
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 

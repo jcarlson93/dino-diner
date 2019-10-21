@@ -14,6 +14,16 @@
             List to store the ingredients.
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Brontowurst.Description">
+            <summary>
+            Gets a description of this menu item.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Brontowurst.Special">
+            <summary>
+            Gets any special instructions for this menu item.
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.Brontowurst.#ctor">
             <summary>
             Constructor for the Brontowurst class. Sets the price and calories.
@@ -112,6 +122,16 @@
             List to store the ingredients.
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.DinoNuggets.Description">
+            <summary>
+            Gets a description of this menu item.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.DinoNuggets.Special">
+            <summary>
+            Gets any special instructions for this menu item.
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.DinoNuggets.#ctor">
             <summary>
             Constructor for the Dino Nuggets class. Sets the price and calories.
@@ -206,6 +226,11 @@
             </summary>
             <param name="propertyName"></param>
         </member>
+        <member name="P:DinoDiner.Menu.Entree.Description">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Fryceritops">
             <summary>
             Represents the Fryceritops side.
@@ -255,6 +280,26 @@
         <member name="P:DinoDiner.Menu.IMenuItem.Ingredients">
             <summary>
             A list of the ingredients of the menu item.
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.IOrderItem">
+            <summary>
+            Represents the Order Item interface.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IOrderItem.Price">
+            <summary>
+            Gets the Price for the Order Item.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IOrderItem.Description">
+            <summary>
+            Gets a description of the Order Item.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IOrderItem.Special">
+            <summary>
+            Gets any special instructions for the order item.
             </summary>
         </member>
         <member name="T:DinoDiner.Menu.JurassicJava">
@@ -401,6 +446,11 @@
             </summary>
             <returns>The name of the Menu Item.</returns>
         </member>
+        <member name="T:DinoDiner.Menu.Order">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.PrehistoricPBJ">
             <summary>
             Represents the Prehistoric PB and J entree.
@@ -413,7 +463,7 @@
         </member>
         <member name="P:DinoDiner.Menu.PrehistoricPBJ.Special">
             <summary>
-            Gets any special preparation instructions.
+            Gets any special instructions for this menu item.
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.PrehistoricPBJ.Ingredients">
