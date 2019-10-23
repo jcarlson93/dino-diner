@@ -14,7 +14,10 @@
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
         <TextBox Text="Order" Grid.Row="0" HorizontalAlignment="Center"/>
-        <ListBox Grid.Row="1" ItemsSource="{Binding Path=Items}">
+        <ListBox Grid.Row="1" Name="OrderItems"
+                 ItemsSource="{Binding Path=Items, UpdateSourceTrigger=PropertyChanged}"
+                 IsSynchronizedWithCurrentItem="True"
+                 SelectionChanged="OnSelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>

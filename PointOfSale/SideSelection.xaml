@@ -37,7 +37,7 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button Name="BtnAddFryceritops" Click="AddFryceritops" Grid.Row="0" BorderThickness="2" BorderBrush="Black">
+            <Button Name="BtnAddFryceritops" Click="OnSelectFryceritops" Grid.Row="0" BorderThickness="2" BorderBrush="Black">
                 <Button.Background>
                     <ImageBrush ImageSource="Assets/DinoDiner-08.png"/>
                 </Button.Background>
@@ -45,7 +45,7 @@
                     <TextBlock DockPanel.Dock="Bottom">Fryceritops</TextBlock>
                 </DockPanel>
             </Button>
-            <Button Name="BtnAddMeteorMacAndCheese" Click="AddMeteorMacAndCheese" Grid.Row="1" BorderThickness="2" BorderBrush="Black">
+            <Button Name="BtnAddMeteorMacAndCheese" Click="OnSelectMeteorMacAndCheese" Grid.Row="1" BorderThickness="2" BorderBrush="Black">
                 <Button.Background>
                     <ImageBrush ImageSource="Assets/DinoDiner-09.png"/>
                 </Button.Background>
@@ -53,7 +53,7 @@
                     <TextBlock DockPanel.Dock="Bottom">Meteor Mac &amp; Cheese</TextBlock>
                 </DockPanel>
             </Button>
-            <Button Name="BtnAddMezzorellaSticks" Click="AddMezzorellaSticks" Grid.Row="2" BorderThickness="2" BorderBrush="Black">
+            <Button Name="BtnAddMezzorellaSticks" Click="OnSelectMezzorellaSticks" Grid.Row="2" BorderThickness="2" BorderBrush="Black">
                 <Button.Background>
                     <ImageBrush ImageSource="Assets/DinoDiner-10.png"/>
                 </Button.Background>
@@ -61,7 +61,7 @@
                     <TextBlock DockPanel.Dock="Bottom">Mezzorella Sticks</TextBlock>
                 </DockPanel>
             </Button>
-            <Button Name="BtnAddTriceritots" Click="AddTriceritots" Grid.Row="3" BorderThickness="2" BorderBrush="Black">
+            <Button Name="BtnAddTriceritots" Click="OnSelectTriceritots" Grid.Row="3" BorderThickness="2" BorderBrush="Black">
                 <Button.Background>
                     <ImageBrush ImageSource="Assets/DinoDiner-11.png"/>
                 </Button.Background>
@@ -77,15 +77,23 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <RadioButton Name="BtnPickSmall" Grid.Row="0" BorderThickness="2" BorderBrush="Black" FontSize="20" FontWeight="SemiBold">
+            <RadioButton Name="BtnPickSmall" Click="OnMakeSmall" Grid.Row="0" BorderThickness="2" BorderBrush="Black" FontSize="20" FontWeight="SemiBold">
                 Small
             </RadioButton>
-            <RadioButton Name="BtnPickMedium" Grid.Row="1" BorderThickness="2" BorderBrush="Black" FontSize="20" FontWeight="SemiBold">
+            <RadioButton Name="BtnPickMedium" Click="OnMakeMedium" Grid.Row="1" BorderThickness="2" BorderBrush="Black" FontSize="20" FontWeight="SemiBold">
                 Medium
             </RadioButton>
-            <RadioButton Name="BtnPickLarge" Grid.Row="2" BorderThickness="2" BorderBrush="Black" FontSize="20" FontWeight="SemiBold">
+            <RadioButton Name="BtnPickLarge" Click="OnMakeLarge" Grid.Row="2" BorderThickness="2" BorderBrush="Black" FontSize="20" FontWeight="SemiBold">
                 Large
             </RadioButton>
+
+            <ContentControl Content="{Binding Path=Items}">
+                <ContentControl.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}"/>
+                    </DataTemplate>
+                </ContentControl.ContentTemplate>
+            </ContentControl>
         </Grid>
     </Grid>
 </Page>
