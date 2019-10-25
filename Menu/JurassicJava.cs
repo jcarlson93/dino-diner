@@ -68,6 +68,20 @@ namespace DinoDiner.Menu
         }
 
         /// <summary>
+        /// Gets any special instructions for this order item
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (Ice) special.Add("Add Ice");
+                if (RoomForCream) special.Add("Leave Room For Cream");
+                return special.ToArray();
+            }
+        }
+
+        /// <summary>
         /// Constructor for the Jurassic Java drink.
         /// </summary>
         public JurassicJava()

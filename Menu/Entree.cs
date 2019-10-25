@@ -12,7 +12,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Abstract class that represents the Entrees.
     /// </summary>
-    public abstract class Entree : IMenuItem
+    public abstract class Entree : IMenuItem, IOrderItem
     {
         /// <summary>
         /// Gets and sets the Price.
@@ -44,14 +44,19 @@ namespace DinoDiner.Menu
         }
 
         /// <summary>
-        /// 
+        /// Gets a description of this order item.
         /// </summary>
-        public string Description
+        public virtual string Description
         {
             get
             {
                 return this.ToString();
             }
         }
+
+        /// <summary>
+        /// Gets any special instructions for this order item
+        /// </summary>
+        public abstract string[] Special { get; }
     }
 }

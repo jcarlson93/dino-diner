@@ -32,20 +32,9 @@ namespace DinoDiner.Menu
         }
 
         /// <summary>
-        /// Gets a description of this menu item.
-        /// </summary>
-        public string Description
-        {
-            get
-            {
-                return this.ToString();
-            }
-        }
-
-        /// <summary>
         /// Gets any special instructions for this menu item.
         /// </summary>
-        public string[] Special
+        public override string[] Special
         {
             get
             {

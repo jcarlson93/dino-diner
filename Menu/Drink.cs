@@ -12,7 +12,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Abstract class representing the drinks.
     /// </summary>
-    public abstract class Drink : IMenuItem
+    public abstract class Drink : IMenuItem, IOrderItem
     {
         /// <summary>
         /// Gets or sets the size.
@@ -52,6 +52,22 @@ namespace DinoDiner.Menu
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        /// <summary>
+        /// Gets a description of this order item.
+        /// </summary>
+        public virtual string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
+        /// <summary>
+        /// Gets any special instructions for this order item
+        /// </summary>
+        public abstract string[] Special { get; }
 
         /// <summary>
         /// Method to hold the ice for a drink.
