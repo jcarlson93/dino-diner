@@ -83,7 +83,34 @@ namespace DinoDiner.Menu
             }
         }
 
-        
+        /// <summary>
+        /// Gets a description of this menu item.
+        /// </summary>
+        public string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
+        /// <summary>
+        /// Gets any special instructions for this menu item.
+        /// </summary>
+        public string[] Special
+        {
+            get
+            {
+                List<string> ingredients = new List<string>();
+                ingredients.AddRange(Entree.Special);
+                ingredients.Add(Side.ToString()); // could also do Side.Description.
+                ingredients.AddRange(Side.Special);
+                ingredients.Add(Drink.ToString());
+                ingredients.AddRange(Drink.Special);
+                return ingredients.ToArray();
+            }
+        }
+
         /// <summary>
         /// Constructs a new combo with the specified entree
         /// </summary>
@@ -101,33 +128,5 @@ namespace DinoDiner.Menu
         {
             return $"{Entree} Combo";
         }
-
-        /// <summary>
-        /// Gets a description of this menu item.
-        /// </summary>
-        public string Description
-        {
-            get
-            {
-                return this.ToString();
-            }
-        }
-
-        /// <summary>
-        /// Gets any special instructions for this menu item.
-        /// </summary>
-        /*public string[] Special
-        {
-            get
-            {
-                List<string> ingredients = new List<string>();
-                ingredients.AddRange(Entree.Special);
-                ingredients.Add(Side.ToString()); // could also do Side.Description.
-                ingredients.AddRange(Side.Special);
-                ingredients.Add(Drink.ToString());
-                ingredients.AddRange(Drink.Special);
-                return ingredients.ToArray();
-            }
-        }*/
     }
 }
