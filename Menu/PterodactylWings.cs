@@ -24,6 +24,18 @@ namespace DinoDiner.Menu
         }
 
         /// <summary>
+        /// Gets any special instructions for this menu item.
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                return special.ToArray();
+            }
+        }
+
+        /// <summary>
         /// Constructor for the Pterodactyl Wings class. Sets the price and calories.
         /// </summary>
         public PterodactylWings()

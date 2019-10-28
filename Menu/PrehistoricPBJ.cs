@@ -16,20 +16,9 @@ namespace DinoDiner.Menu
         private bool jelly = true;
 
         /// <summary>
-        /// Gets and sets the description.
-        /// </summary>
-        public string Description
-        {
-            get
-            {
-                return this.ToString();
-            }
-        }
-
-        /// <summary>
         /// Gets any special instructions for this menu item.
         /// </summary>
-        public string[] Special
+        public override string[] Special
         {
             get
             {

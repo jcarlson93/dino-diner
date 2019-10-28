@@ -32,6 +32,21 @@ namespace DinoDiner.Menu
         }
 
         /// <summary>
+        /// Gets any special instructions for this menu item.
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (!lettuce) special.Add("Hold Lettuce");
+                if (!dressing) special.Add("Hold Dressing");
+                if (!cheese) special.Add("Hold Cheese");
+                return special.ToArray();
+            }
+        }
+
+        /// <summary>
         /// Constructor for the Veloci-Wrap class. Sets the price and calories.
         /// </summary>
         public VelociWrap()

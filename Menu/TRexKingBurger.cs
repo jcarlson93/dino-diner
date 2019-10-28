@@ -43,6 +43,26 @@ namespace DinoDiner.Menu
         }
 
         /// <summary>
+        /// Gets any special instructions for this menu item.
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (!bun) special.Add("Hold Bun");
+                if (!lettuce) special.Add("Hold Lettuce");
+                if (!tomato) special.Add("Hold Tomato");
+                if (!onion) special.Add("Hold Onion");
+                if (!pickle) special.Add("Hold Pickles");
+                if (!ketchup) special.Add("Hold Ketchup");
+                if (!mustard) special.Add("Hold Mustard");
+                if (!mayo) special.Add("Hold Mayo");
+                return special.ToArray();
+            }
+        }
+
+        /// <summary>
         /// Constructor for the T-Rex King Burger class. Sets the price and calories.
         /// </summary>
         public TRexKingBurger()
