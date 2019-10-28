@@ -1,4 +1,7 @@
-﻿using System;
+﻿/* Order Class
+ * Author: Jake Carlson
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Collections.ObjectModel;
@@ -7,10 +10,11 @@ using System.ComponentModel;
 namespace DinoDiner.Menu
 {
     /// <summary>
-    /// 
+    /// Represents a new customer order.
     /// </summary>
     public class Order : INotifyPropertyChanged
     {
+        // private backing variables.
         private double salesTaxRate = 8.0;
 
         /// <summary>
@@ -24,7 +28,7 @@ namespace DinoDiner.Menu
         public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
-        /// 
+        /// The subtotal cost of the order.
         /// </summary>
         public double SubtotalCost
         {
@@ -47,7 +51,7 @@ namespace DinoDiner.Menu
         }
 
         /// <summary>
-        /// 
+        /// The sales tax rate for the order.
         /// </summary>
         public double SalesTaxRate
         {
@@ -69,7 +73,7 @@ namespace DinoDiner.Menu
         } 
 
         /// <summary>
-        /// 
+        /// The sales tax cost for the order.
         /// </summary>
         public double SalesTaxCost
         {
@@ -80,7 +84,7 @@ namespace DinoDiner.Menu
         }
 
         /// <summary>
-        /// 
+        /// The total cost of the order.
         /// </summary>
         public double TotalCost
         {
