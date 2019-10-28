@@ -74,7 +74,8 @@ namespace DinoDiner.Menu
         /// </summary>
         public void HoldIce()
         {
-            this.Ice = false; 
+            this.Ice = false;
+            NotifyOfPropertyChange("Special");
         }
     }
 }

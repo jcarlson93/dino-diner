@@ -63,6 +63,10 @@ namespace DinoDiner.Menu
                         }
                         break;
                 }
+                NotifyOfPropertyChange("Price");
+                NotifyOfPropertyChange("Calories");
+                NotifyOfPropertyChange("Size");
+                NotifyOfPropertyChange("Description");
             }
             get
             {
@@ -114,6 +118,7 @@ namespace DinoDiner.Menu
         public void AddLemon()
         {
             this.Lemon = true;
+            NotifyOfPropertyChange("Special");
         }
 
         /// <summary>

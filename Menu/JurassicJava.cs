@@ -49,6 +49,10 @@ namespace DinoDiner.Menu
                         Calories = 2;
                         break;
                 }
+                NotifyOfPropertyChange("Price");
+                NotifyOfPropertyChange("Calories");
+                NotifyOfPropertyChange("Size");
+                NotifyOfPropertyChange("Description");
             }
             get
             {
@@ -98,6 +102,7 @@ namespace DinoDiner.Menu
         public void LeaveRoomForCream()
         {
             this.RoomForCream = true;
+            NotifyOfPropertyChange("Special");
         }
 
         /// <summary>
@@ -106,6 +111,7 @@ namespace DinoDiner.Menu
         public void AddIce()
         {
             this.Ice = true;
+            NotifyOfPropertyChange("Special");
         }
 
         /// <summary>
