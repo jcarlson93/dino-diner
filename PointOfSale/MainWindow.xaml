@@ -12,6 +12,14 @@
     </Window.DataContext>
     <DockPanel>
         <local:OrderControl x:Name="OrderControl" DockPanel.Dock="Right" Width="200" Background="LightSteelBlue"></local:OrderControl>
+        <Grid DockPanel.Dock="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="1" Click="OnDone">Go Back</Button>
+        </Grid>
         <Frame
             LoadCompleted="OnLoadCompleted"
             DataContextChanged="OnDataContextChanged"

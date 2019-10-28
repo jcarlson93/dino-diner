@@ -33,7 +33,7 @@
                 <TextBlock DockPanel.Dock="Bottom">Dino-Nuggets</TextBlock>
             </DockPanel>
         </Button>
-        <Button BorderThickness="2" BorderBrush="Black">
+        <Button Click="OnAddPrehistoricPBJ" BorderThickness="2" BorderBrush="Black">
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-03.png"></ImageBrush>
             </Button.Background>
