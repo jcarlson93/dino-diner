@@ -37,7 +37,7 @@
         <Border Grid.Row="2">
             <StackPanel Orientation="Horizontal">
                 <TextBox Text="Price: $"/>
-                <TextBox Text="{Binding Path=SubtotalCost, StringFormat=n2}"/>
+                <TextBlock Text="{Binding Path=SubtotalCost, StringFormat=n2}"/>
             </StackPanel>
         </Border>
         <TextBox Grid.Row="3" Text="Buttons Go Here" VerticalAlignment="Center"/>
