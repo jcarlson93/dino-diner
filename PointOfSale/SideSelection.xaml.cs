@@ -51,7 +51,7 @@ namespace PointOfSale
             }
         }
 
-        public void OnSelectFryceritops(object sender, ExecutedRoutedEventArgs args)
+        public void OnSelectFryceritops(object sender, RoutedEventArgs args)
         {
             SelectSide(new Fryceritops());
             BtnAddFryceritops.IsEnabled = false;
@@ -63,7 +63,7 @@ namespace PointOfSale
             BtnPickLarge.IsEnabled = true;
         }
 
-        public void OnSelectTriceritots(object sender, ExecutedRoutedEventArgs args)
+        public void OnSelectTriceritots(object sender, RoutedEventArgs args)
         {
             SelectSide(new Triceritots());
             BtnAddFryceritops.IsEnabled = false;
@@ -75,7 +75,7 @@ namespace PointOfSale
             BtnPickLarge.IsEnabled = true;
         }
 
-        public void OnSelectMeteorMacAndCheese(object sender, ExecutedRoutedEventArgs args)
+        public void OnSelectMeteorMacAndCheese(object sender, RoutedEventArgs args)
         {
             SelectSide(new MeteorMacAndCheese());
             BtnAddFryceritops.IsEnabled = false;
@@ -87,7 +87,7 @@ namespace PointOfSale
             BtnPickLarge.IsEnabled = true;
         }
 
-        public void OnSelectMezzorellaSticks(object sender, ExecutedRoutedEventArgs args)
+        public void OnSelectMezzorellaSticks(object sender, RoutedEventArgs args)
         {
             SelectSide(new MezzorellaSticks());
             BtnAddFryceritops.IsEnabled = false;

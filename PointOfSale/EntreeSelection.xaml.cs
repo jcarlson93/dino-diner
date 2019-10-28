@@ -26,7 +26,7 @@ namespace PointOfSale
             InitializeComponent();
         }
 
-        private void OnAddPrehistoricPBJ(object sender, NavigationEventArgs args)
+        private void OnAddPrehistoricPBJ(object sender, RoutedEventArgs args)
         {
             if (DataContext is Order order)
             {

@@ -52,7 +52,7 @@ namespace PointOfSale
             content.DataContext = OrderUI.DataContext;
         }
 
-        private void OnDone(object sender, NavigationEventArgs args)
+        private void OnDone(object sender, RoutedEventArgs args)
         {
             if (OrderUI.NavigationService.CanGoBack)
             {
