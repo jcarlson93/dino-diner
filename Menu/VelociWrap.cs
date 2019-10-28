@@ -61,6 +61,8 @@ namespace DinoDiner.Menu
         public void HoldDressing()
         {
             dressing = false;
+            NotifyOfPropertyChange("Special");
+            NotifyOfPropertyChange("Ingredients");
         }
 
         /// <summary>
@@ -69,6 +71,8 @@ namespace DinoDiner.Menu
         public void HoldLettuce()
         {
             lettuce = false;
+            NotifyOfPropertyChange("Special");
+            NotifyOfPropertyChange("Ingredients");
         }
 
         /// <summary>
@@ -77,6 +81,8 @@ namespace DinoDiner.Menu
         public void HoldCheese()
         {
             cheese = false;
+            NotifyOfPropertyChange("Special");
+            NotifyOfPropertyChange("Ingredients");
         }
 
         /// <summary>
