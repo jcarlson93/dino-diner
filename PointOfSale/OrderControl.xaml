@@ -16,7 +16,7 @@
         <TextBox Text="Order" Grid.Row="0" HorizontalAlignment="Center"/>
         <ListBox Grid.Row="1" Name="OrderItems"
                  ItemsSource="{Binding Path=Items, UpdateSourceTrigger=PropertyChanged}"
-                 IsSynchronizedWithCurrentItem="True"
+                 IsSynchronizedWithCurrentItem="False"
                  SelectionChanged="OnSelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
@@ -29,7 +29,7 @@
                             <TextBlock Text="{Binding Path=Description}"/>
                             <Button Grid.Column="1" Click="OnRemoveItem" Background="Red" Foreground="White">X</Button>
                         </Grid>
-                        <ListBox ItemsSource="{Binding Path=Special}"/>
+                        <ListBox ItemsSource="{Binding Path=Special}" BorderBrush="White"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

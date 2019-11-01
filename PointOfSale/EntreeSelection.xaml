@@ -17,7 +17,7 @@
             </Style>
         </WrapPanel.Resources>
 
-        <Button BorderThickness="2" BorderBrush="Black">
+        <Button Click="OnAddBrontowurst" BorderThickness="2" BorderBrush="Black">
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-01.png"/>
             </Button.Background>
@@ -25,7 +25,7 @@
                 <TextBlock DockPanel.Dock="Bottom">Brontowurst</TextBlock>
             </DockPanel>
         </Button>
-        <Button BorderThickness="2" BorderBrush="Black">
+        <Button Click="OnAddDinoNuggets" BorderThickness="2" BorderBrush="Black">
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-02.png"/>
             </Button.Background>
@@ -41,7 +41,7 @@
                 <TextBlock DockPanel.Dock="Bottom">Prehistoric PB&amp;J</TextBlock>
             </DockPanel>
         </Button>
-        <Button BorderThickness="2" BorderBrush="Black">
+        <Button Click="OnAddPterodactylWings" BorderThickness="2" BorderBrush="Black">
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-04.png"/>
             </Button.Background>
@@ -49,7 +49,7 @@
                 <TextBlock DockPanel.Dock="Bottom">Pterodactyl Wings</TextBlock>
             </DockPanel>
         </Button>
-        <Button BorderThickness="2" BorderBrush="Black">
+        <Button Click="OnAddSteakosaurusBurger" BorderThickness="2" BorderBrush="Black">
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-05.png"/>
             </Button.Background>
@@ -57,7 +57,7 @@
                 <TextBlock DockPanel.Dock="Bottom">Steakosaurus Burger</TextBlock>
             </DockPanel>
         </Button>
-        <Button BorderThickness="2" BorderBrush="Black">
+        <Button Click="OnAddTRexKingBurger" BorderThickness="2" BorderBrush="Black">
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-06.png"/>
             </Button.Background>
@@ -65,7 +65,7 @@
                 <TextBlock DockPanel.Dock="Bottom">T-Rex King Burger</TextBlock>
             </DockPanel>
         </Button>
-        <Button BorderThickness="2" BorderBrush="Black">
+        <Button Click="OnAddVelociwrap" BorderThickness="2" BorderBrush="Black">
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-07.png"/>
             </Button.Background>

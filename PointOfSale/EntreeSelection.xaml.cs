@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Entree Selection Page
+ * Author: Jake Carlson
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,11 +25,81 @@ namespace PointOfSale
     /// </summary>
     public partial class EntreeSelection : Page
     {
+        // Private backing variables.
+        private Entree entree;
+
+        /// <summary>
+        /// Gets or sets the Entree selected.
+        /// </summary>
+        public Entree Entree
+        {
+            get
+            {
+                return entree;
+            }
+            set
+            {
+                entree = value;
+            }
+        }
+
+        /// <summary>
+        /// Constructor for the Entree Selection Class.
+        /// </summary>
         public EntreeSelection()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Overloaded constructor for the Entree Selection Class.
+        /// </summary>
+        /// <param name="entree">The entree that has been changed.</param>
+        public EntreeSelection(Entree entree)
+        {
+            InitializeComponent();
+            Entree = entree;
+        }
+
+        /// <summary>
+        /// Helper function to add the entree to the Order.
+        /// </summary>
+        /// <param name="entree"></param>
+        private void SelectEntree(Entree entree)
+        {
+            if (DataContext is Order order)
+            {
+                order.Add(entree);
+                Entree = entree;
+                NavigationService.Navigate(new MenuCategorySelection());
+            }
+        }
+
+        /// <summary>
+        /// Click event for adding a brontowurst to the order.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        public void OnAddBrontowurst(object sender, RoutedEventArgs args)
+        {
+            SelectEntree(new Brontowurst());
+        }
+
+        /// <summary>
+        /// Click event for adding dino nuggets to the order.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        public void OnAddDinoNuggets(object sender, RoutedEventArgs args)
+        {
+            SelectEntree(new DinoNuggets());
+        }
+
+        /// <summary>
+        /// Click event for adding a prehistoric PB&J to the order.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void OnAddPrehistoricPBJ(object sender, RoutedEventArgs args)
         {
             if (DataContext is Order order)
@@ -34,6 +108,46 @@ namespace PointOfSale
                 order.Add(pbj);
                 NavigationService.Navigate(new PrehistoricPBJCustomization(pbj));
             }
+        }
+
+        /// <summary>
+        /// Click event for adding pterodactyl wings to the order.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        public void OnAddPterodactylWings(object sender, RoutedEventArgs args)
+        {
+            SelectEntree(new PterodactylWings());
+        }
+
+        /// <summary>
+        /// Click event for adding a steakosaurus burger to the order.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        public void OnAddSteakosaurusBurger(object sender, RoutedEventArgs args)
+        {
+            SelectEntree(new SteakosaurusBurger());
+        }
+
+        /// <summary>
+        /// Click event for adding a t-rex king burger to the order.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        public void OnAddTRexKingBurger(object sender, RoutedEventArgs args)
+        {
+            SelectEntree(new TRexKingBurger());
+        }
+
+        /// <summary>
+        /// Click event for adding a velociwrap to the order.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        public void OnAddVelociwrap(object sender, RoutedEventArgs args)
+        {
+            SelectEntree(new VelociWrap());
         }
     }
 }

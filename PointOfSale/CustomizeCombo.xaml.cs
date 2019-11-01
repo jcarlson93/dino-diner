@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Customize Combo Page
+ * Author: Jake Carlson
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,16 +24,29 @@ namespace PointOfSale
     /// </summary>
     public partial class CustomizeCombo : Page
     {
+        /// <summary>
+        /// Constructor for the customize combo class.
+        /// </summary>
         public CustomizeCombo()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Click event for choosing a side.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void SideSelection(object sender, RoutedEventArgs args)
         {
             NavigationService.Navigate(new SideSelection());
         }
 
+        /// <summary>
+        /// Click event for choosing a drink.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void DrinkSelection(object sender, RoutedEventArgs args)
         {
             NavigationService.Navigate(new DrinkSelection());

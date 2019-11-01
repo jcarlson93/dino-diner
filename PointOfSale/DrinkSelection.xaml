@@ -37,7 +37,7 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button Grid.Row="0" BorderThickness="2" BorderBrush="Black">
+            <Button Click="OnAddSodasaurus" Grid.Row="0" BorderThickness="2" BorderBrush="Black">
                 <Button.Background>
                     <ImageBrush ImageSource="Assets/DinoDiner-14.png"/>
                 </Button.Background>
@@ -45,7 +45,7 @@
                     <TextBlock DockPanel.Dock="Bottom">Sodasaurus</TextBlock>
                 </DockPanel>
             </Button>
-            <Button Grid.Row="1" BorderThickness="2" BorderBrush="Black">
+            <Button Click="OnAddTyrannotea" Grid.Row="1" BorderThickness="2" BorderBrush="Black">
                 <Button.Background>
                     <ImageBrush ImageSource="Assets/DinoDiner-12.png"/>
                 </Button.Background>
@@ -53,7 +53,7 @@
                     <TextBlock DockPanel.Dock="Bottom">Tyrannotea</TextBlock>
                 </DockPanel>
             </Button>
-            <Button Grid.Row="2" BorderThickness="2" BorderBrush="Black">
+            <Button Click="OnAddJurassicJava" Grid.Row="2" BorderThickness="2" BorderBrush="Black">
                 <Button.Background>
                     <ImageBrush ImageSource="Assets/DinoDiner-13.png"/>
                 </Button.Background>
@@ -61,7 +61,7 @@
                     <TextBlock DockPanel.Dock="Bottom">Jurassic Java</TextBlock>
                 </DockPanel>
             </Button>
-            <Button Grid.Row="3" BorderThickness="2" BorderBrush="Black">
+            <Button Click="OnAddWater" Grid.Row="3" BorderThickness="2" BorderBrush="Black">
                 <Button.Background>
                     <ImageBrush ImageSource="Assets/DinoDiner-15.png"/>
                 </Button.Background>
@@ -77,13 +77,13 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <RadioButton Grid.Row="0" BorderThickness="2" BorderBrush="Black" FontSize="20" FontWeight="SemiBold">
+            <RadioButton Name="BtnPickSmall" Click="OnMakeSmall" Grid.Row="0" BorderThickness="2" BorderBrush="Black" FontSize="20" FontWeight="SemiBold">
                 Small
             </RadioButton>
-            <RadioButton Grid.Row="1" BorderThickness="2" BorderBrush="Black" FontSize="20" FontWeight="SemiBold">
+            <RadioButton Name="BtnPickMedium" Click="OnMakeMedium" Grid.Row="1" BorderThickness="2" BorderBrush="Black" FontSize="20" FontWeight="SemiBold">
                 Medium
             </RadioButton>
-            <RadioButton Grid.Row="2" BorderThickness="2" BorderBrush="Black" FontSize="20" FontWeight="SemiBold">
+            <RadioButton Name="BtnPickLarge" Click="OnMakeLarge" Grid.Row="2" BorderThickness="2" BorderBrush="Black" FontSize="20" FontWeight="SemiBold">
                 Large
             </RadioButton>
         </Grid>
@@ -93,17 +93,31 @@
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button Click="DrinkFlavor" Grid.Row="0" BorderThickness="2" BorderBrush="Black" FontSize="20" FontWeight="SemiBold">
-                Sweet/
-                Decaf/
-                Flavor
+            <Button Name="BtnFlavor" Click="DrinkFlavor" Grid.Row="0" BorderThickness="2" BorderBrush="Black" FontSize="20" FontWeight="SemiBold" Visibility="Hidden">
+                Drink Flavor
             </Button>
-            <Button Grid.Row="1" BorderThickness="2" BorderBrush="Black" FontSize="20" FontWeight="SemiBold">
+            <Button Name="BtnSweet" Click="OnMakeSweet" Grid.Row="0" BorderThickness="2" BorderBrush="Black" FontSize="20" FontWeight="SemiBold" Visibility="Hidden">
+                Sweet
+            </Button>
+            <Button Name="BtnDecaf" Click="OnMakeDecaf" Grid.Row="0" BorderThickness="2" BorderBrush="Black" FontSize="20" FontWeight="SemiBold" Visibility="Hidden">
+                Decaf
+            </Button>
+            <Button Name="BtnLemon" Click="OnAddLemon" Grid.Row="1" BorderThickness="2" BorderBrush="Black" FontSize="20" FontWeight="SemiBold" Visibility="Hidden">
                 Add Lemon
             </Button>
-            <Button Grid.Row="2" BorderThickness="2" BorderBrush="Black" FontSize="20" FontWeight="SemiBold">
+            <Button Name="BtnCream" Click="OnLeaveRoomForCream" Grid.Row="1" BorderThickness="2" BorderBrush="Black" FontSize="20" FontWeight="SemiBold" Visibility="Hidden">
+                Leave Room For Cream
+            </Button>
+            <Button Name="BtnHoldIce" Click="OnHoldIce" Grid.Row="2" BorderThickness="2" BorderBrush="Black" FontSize="20" FontWeight="SemiBold" Visibility="Hidden">
                 Hold Ice
+            </Button>
+            <Button Name="BtnAddIce" Click="OnAddIce" Grid.Row="2" BorderThickness="2" BorderBrush="Black" FontSize="20" FontWeight="SemiBold" Visibility="Hidden">
+                Add Ice
+            </Button>
+            <Button Name="BtnDone" Click="OnDone" Grid.Row="3" BorderThickness="2" BorderBrush="Black" FontSize="20" FontWeight="SemiBold">
+                Done
             </Button>
         </Grid>
     </Grid>

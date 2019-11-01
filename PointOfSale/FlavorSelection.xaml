@@ -13,14 +13,19 @@
             <RowDefinition Height="0.1*"/>
             <RowDefinition Height="0.1*"/>
             <RowDefinition/>
+            <RowDefinition Height=".25*"/>
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16">Add To Order</Label>
-        <Label Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom">Flavor</Label>
-        <WrapPanel Grid.Row="2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width=".25*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16">Add To Order</Label>
+        <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom">Flavor</Label>
+        <WrapPanel Grid.Row="2" Grid.Column="0">
             <WrapPanel.Resources>
                 <Style TargetType="Button">
-                    <Setter Property="Width" Value="180"/>
-                    <Setter Property="Height" Value="140"/>
+                    <Setter Property="Width" Value="150"/>
+                    <Setter Property="Height" Value="130"/>
                     <Setter Property="Margin" Value="5"/>
                     <Setter Property="BorderThickness" Value="2"/>
                     <Setter Property="BorderBrush" Value="Black"/>
@@ -28,13 +33,14 @@
                     <Setter Property="FontWeight" Value="SemiBold"/>
                 </Style>
             </WrapPanel.Resources>
-            <Button>Cherry</Button>
-            <Button>Chocolate</Button>
-            <Button>Cola</Button>
-            <Button>Lime</Button>
-            <Button>Orange</Button>
-            <Button>Root Beer</Button>
-            <Button>Vanilla</Button>
+            <Button Click="OnSelectCherry">Cherry</Button>
+            <Button Click="OnSelectChocolate">Chocolate</Button>
+            <Button Click="OnSelectCola">Cola</Button>
+            <Button Click="OnSelectLime">Lime</Button>
+            <Button Click="OnSelectOrange">Orange</Button>
+            <Button Click="OnSelectRootBeer">Root Beer</Button>
+            <Button Click="OnSelectVanilla">Vanilla</Button>
         </WrapPanel>
+        <Button Click="OnDone" Grid.Row="3" Grid.Column="1" Margin="5" BorderThickness="1.5" BorderBrush="Black" FontSize="16" FontWeight="SemiBold">Done</Button>
     </Grid>
 </Page>

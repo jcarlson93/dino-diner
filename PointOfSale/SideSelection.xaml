@@ -86,14 +86,13 @@
             <RadioButton Name="BtnPickLarge" Click="OnMakeLarge" Grid.Row="2" BorderThickness="2" BorderBrush="Black" FontSize="20" FontWeight="SemiBold">
                 Large
             </RadioButton>
-
-            <ContentControl Content="{Binding Path=Items}">
-                <ContentControl.ContentTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding}"/>
-                    </DataTemplate>
-                </ContentControl.ContentTemplate>
-            </ContentControl>
         </Grid>
+        <ContentControl Content="{Binding Path=Items}">
+            <ContentControl.ContentTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}"/>
+                </DataTemplate>
+            </ContentControl.ContentTemplate>
+        </ContentControl>
     </Grid>
 </Page>
