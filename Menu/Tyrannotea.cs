@@ -122,6 +122,15 @@ namespace DinoDiner.Menu
         }
 
         /// <summary>
+        /// Makes the Tyrannotea sweet.
+        /// </summary>
+        public void MakeSweet()
+        {
+            this.Sweet = true;
+            NotifyOfPropertyChange("Description");
+        }
+
+        /// <summary>
         /// Overrides the ToString() method.
         /// </summary>
         /// <returns>The name of the Menu Item.</returns>

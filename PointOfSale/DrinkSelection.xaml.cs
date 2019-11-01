@@ -59,6 +59,22 @@ namespace PointOfSale
         {
             InitializeComponent();
             Drink = drink;
+            if (Drink is Sodasaurus soda)
+            {
+                SodasaurusSpecials();
+            }
+            if (Drink is Tyrannotea tea)
+            {
+                TyrannoteaSpecials();
+            }
+            if (Drink is JurassicJava java)
+            {
+                JurassicJavaSpecials();
+            }
+            if (Drink is Water water)
+            {
+                WaterSpecials();
+            }
         }
 
         /// <summary>
@@ -97,11 +113,9 @@ namespace PointOfSale
         }
 
         /// <summary>
-        /// Click event to add a sodasaurus drink to the order.
+        /// Helper function for displaying the Special buttons for the sodasaurus drink.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="args"></param>
-        public void OnAddSodasaurus(object sender, RoutedEventArgs args)
+        private void SodasaurusSpecials()
         {
             BtnFlavor.Visibility = Visibility.Visible;
             BtnSweet.Visibility = Visibility.Hidden;
@@ -110,6 +124,58 @@ namespace PointOfSale
             BtnCream.Visibility = Visibility.Hidden;
             BtnHoldIce.Visibility = Visibility.Visible;
             BtnAddIce.Visibility = Visibility.Hidden;
+        }
+
+        /// <summary>
+        /// Helper function for displaying the Special buttons for the tyrannotea drink.
+        /// </summary>
+        private void TyrannoteaSpecials()
+        {
+            BtnFlavor.Visibility = Visibility.Hidden;
+            BtnSweet.Visibility = Visibility.Visible;
+            BtnDecaf.Visibility = Visibility.Hidden;
+            BtnLemon.Visibility = Visibility.Visible;
+            BtnCream.Visibility = Visibility.Hidden;
+            BtnHoldIce.Visibility = Visibility.Visible;
+            BtnAddIce.Visibility = Visibility.Hidden;
+        }
+
+        /// <summary>
+        /// Helper function for displaying the Special buttons for the tyrannotea drink.
+        /// </summary>
+        private void JurassicJavaSpecials()
+        {
+            BtnFlavor.Visibility = Visibility.Hidden;
+            BtnSweet.Visibility = Visibility.Hidden;
+            BtnDecaf.Visibility = Visibility.Visible;
+            BtnLemon.Visibility = Visibility.Hidden;
+            BtnCream.Visibility = Visibility.Visible;
+            BtnHoldIce.Visibility = Visibility.Hidden;
+            BtnAddIce.Visibility = Visibility.Visible;
+        }
+
+        /// <summary>
+        /// Helper function for displaying the Special buttons for the water drink.
+        /// </summary>
+        private void WaterSpecials()
+        {
+            BtnFlavor.Visibility = Visibility.Hidden;
+            BtnSweet.Visibility = Visibility.Hidden;
+            BtnDecaf.Visibility = Visibility.Hidden;
+            BtnLemon.Visibility = Visibility.Visible;
+            BtnCream.Visibility = Visibility.Hidden;
+            BtnHoldIce.Visibility = Visibility.Visible;
+            BtnAddIce.Visibility = Visibility.Hidden;
+        }
+
+        /// <summary>
+        /// Click event to add a sodasaurus drink to the order.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        public void OnAddSodasaurus(object sender, RoutedEventArgs args)
+        {
+            SodasaurusSpecials();
             SelectDrink(new Sodasaurus());
         }
 
@@ -120,13 +186,7 @@ namespace PointOfSale
         /// <param name="args"></param>
         public void OnAddTyrannotea(object sender, RoutedEventArgs args)
         {
-            BtnFlavor.Visibility = Visibility.Hidden;
-            BtnSweet.Visibility = Visibility.Visible;
-            BtnDecaf.Visibility = Visibility.Hidden;
-            BtnLemon.Visibility = Visibility.Visible;
-            BtnCream.Visibility = Visibility.Hidden;
-            BtnHoldIce.Visibility = Visibility.Visible;
-            BtnAddIce.Visibility = Visibility.Hidden;
+            TyrannoteaSpecials();
             SelectDrink(new Tyrannotea());
         }
 
@@ -137,13 +197,7 @@ namespace PointOfSale
         /// <param name="args"></param>
         public void OnAddJurassicJava(object sender, RoutedEventArgs args)
         {
-            BtnFlavor.Visibility = Visibility.Hidden;
-            BtnSweet.Visibility = Visibility.Hidden;
-            BtnDecaf.Visibility = Visibility.Visible;
-            BtnLemon.Visibility = Visibility.Hidden;
-            BtnCream.Visibility = Visibility.Visible;
-            BtnHoldIce.Visibility = Visibility.Hidden;
-            BtnAddIce.Visibility = Visibility.Visible;
+            JurassicJavaSpecials();
             SelectDrink(new JurassicJava());
         }
 
@@ -154,13 +208,7 @@ namespace PointOfSale
         /// <param name="args"></param>
         public void OnAddWater(object sender, RoutedEventArgs args)
         {
-            BtnFlavor.Visibility = Visibility.Hidden;
-            BtnSweet.Visibility = Visibility.Hidden;
-            BtnDecaf.Visibility = Visibility.Hidden;
-            BtnLemon.Visibility = Visibility.Visible;
-            BtnCream.Visibility = Visibility.Hidden;
-            BtnHoldIce.Visibility = Visibility.Visible;
-            BtnAddIce.Visibility = Visibility.Hidden;
+            WaterSpecials();
             SelectDrink(new Water());
         }
 
@@ -203,7 +251,7 @@ namespace PointOfSale
         {
             if (Drink is Tyrannotea tea)
             {
-                tea.Sweet = true;
+                tea.MakeSweet();
             }
         }
 

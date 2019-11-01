@@ -881,6 +881,11 @@
             Adds the lemon to tyrannotea drink.
             </summary>
         </member>
+        <member name="M:DinoDiner.Menu.Tyrannotea.MakeSweet">
+            <summary>
+            Makes the Tyrannotea sweet.
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.Tyrannotea.ToString">
             <summary>
             Overrides the ToString() method.
