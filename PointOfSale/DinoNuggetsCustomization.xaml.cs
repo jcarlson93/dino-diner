@@ -1,8 +1,4 @@
-﻿/* Prehistoric PB&J Customization Page
- * Author: Jake Carlson
-*/
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,41 +17,31 @@ using DinoDiner.Menu;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for PrehistoricPBJCustomization.xaml
+    /// Interaction logic for DinoNuggetsCustomization.xaml
     /// </summary>
-    public partial class PrehistoricPBJCustomization : Page
+    public partial class DinoNuggetsCustomization : Page
     {
         // Private backing variables.
-        private PrehistoricPBJ pbj;
+        private DinoNuggets nugget;
 
         /// <summary>
-        /// Constructor for the Prehistoric PB&J Customization class.
+        /// Constructor for the Dino Nuggets Customization page.
         /// </summary>
-        /// <param name="pbj">The Prehistoric PB&J order item to be customized.</param>
-        public PrehistoricPBJCustomization(PrehistoricPBJ pbj)
+        /// <param name="nugget">The dino nugget order item to customize.</param>
+        public DinoNuggetsCustomization(DinoNuggets nugget)
         {
             InitializeComponent();
-            this.pbj = pbj;
+            this.nugget = nugget;
         }
 
         /// <summary>
-        /// Click event for the hold peanut butter button.
+        /// Click event for the Add Nugget button, adds a nugget to the Dino Nuggets order item.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
-        private void OnHoldPeanutButter(object sender, RoutedEventArgs args)
+        private void OnAddNugget(object sender, RoutedEventArgs args)
         {
-            pbj.HoldPeanutButter();
-        }
-
-        /// <summary>
-        /// Click event for the hold jelly button.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="args"></param>
-        private void OnHoldJelly(object sender, RoutedEventArgs args)
-        {
-            pbj.HoldJelly();
+            nugget.AddNugget();
         }
 
         /// <summary>

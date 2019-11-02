@@ -82,7 +82,12 @@ namespace PointOfSale
         /// <param name="args"></param>
         public void OnAddBrontowurst(object sender, RoutedEventArgs args)
         {
-            SelectEntree(new Brontowurst());
+            if (DataContext is Order order)
+            {
+                Brontowurst bw = new Brontowurst();
+                order.Add(bw);
+                NavigationService.Navigate(new BrontowurstCustomization(bw));
+            }
         }
 
         /// <summary>
@@ -92,7 +97,12 @@ namespace PointOfSale
         /// <param name="args"></param>
         public void OnAddDinoNuggets(object sender, RoutedEventArgs args)
         {
-            SelectEntree(new DinoNuggets());
+            if (DataContext is Order order)
+            {
+                DinoNuggets nuggets = new DinoNuggets();
+                order.Add(nuggets);
+                NavigationService.Navigate(new DinoNuggetsCustomization(nuggets));
+            }
         }
 
         /// <summary>
@@ -117,7 +127,12 @@ namespace PointOfSale
         /// <param name="args"></param>
         public void OnAddPterodactylWings(object sender, RoutedEventArgs args)
         {
-            SelectEntree(new PterodactylWings());
+            if (DataContext is Order order)
+            {
+                PterodactylWings wings = new PterodactylWings();
+                order.Add(wings);
+                NavigationService.Navigate(new PterodactylWingsCustomization(wings));
+            }
         }
 
         /// <summary>
@@ -127,7 +142,12 @@ namespace PointOfSale
         /// <param name="args"></param>
         public void OnAddSteakosaurusBurger(object sender, RoutedEventArgs args)
         {
-            SelectEntree(new SteakosaurusBurger());
+            if (DataContext is Order order)
+            {
+                SteakosaurusBurger burger = new SteakosaurusBurger();
+                order.Add(burger);
+                NavigationService.Navigate(new SteakosaurusBurgerCustomization(burger));
+            }
         }
 
         /// <summary>
@@ -137,7 +157,12 @@ namespace PointOfSale
         /// <param name="args"></param>
         public void OnAddTRexKingBurger(object sender, RoutedEventArgs args)
         {
-            SelectEntree(new TRexKingBurger());
+            if (DataContext is Order order)
+            {
+                TRexKingBurger burger = new TRexKingBurger();
+                order.Add(burger);
+                NavigationService.Navigate(new TRexKingBurgerCustomization(burger));
+            }
         }
 
         /// <summary>
@@ -147,7 +172,12 @@ namespace PointOfSale
         /// <param name="args"></param>
         public void OnAddVelociwrap(object sender, RoutedEventArgs args)
         {
-            SelectEntree(new VelociWrap());
+            if (DataContext is Order order)
+            {
+                VelociWrap wrap = new VelociWrap();
+                order.Add(wrap);
+                NavigationService.Navigate(new VelociWrapCustomization(wrap));
+            }
         }
     }
 }

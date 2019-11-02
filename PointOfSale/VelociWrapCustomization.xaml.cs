@@ -1,5 +1,5 @@
-﻿/* Prehistoric PB&J Customization Page
- * Author: Jake Carlson
+﻿/* Veloci-Wrap Customization page
+ * Authpr: Jake Carlson
 */
 
 using System;
@@ -21,46 +21,55 @@ using DinoDiner.Menu;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for PrehistoricPBJCustomization.xaml
+    /// Interaction logic for VelociWrapCustomization.xaml
     /// </summary>
-    public partial class PrehistoricPBJCustomization : Page
+    public partial class VelociWrapCustomization : Page
     {
         // Private backing variables.
-        private PrehistoricPBJ pbj;
+        private VelociWrap wrap;
 
         /// <summary>
-        /// Constructor for the Prehistoric PB&J Customization class.
+        /// Constructor for the Veloci-Wrap Customization page.
         /// </summary>
-        /// <param name="pbj">The Prehistoric PB&J order item to be customized.</param>
-        public PrehistoricPBJCustomization(PrehistoricPBJ pbj)
+        /// <param name="wrap">The Veloci-rap order item to be customized.</param>
+        public VelociWrapCustomization(VelociWrap wrap)
         {
             InitializeComponent();
-            this.pbj = pbj;
+            this.wrap = wrap;
         }
 
         /// <summary>
-        /// Click event for the hold peanut butter button.
+        /// Click event for the Hold Lettuce button, holds the lettuce for the Veloci-Wrap order item.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
-        private void OnHoldPeanutButter(object sender, RoutedEventArgs args)
+        private void OnHoldLettuce(object sender, RoutedEventArgs args)
         {
-            pbj.HoldPeanutButter();
+            wrap.HoldLettuce();
         }
 
         /// <summary>
-        /// Click event for the hold jelly button.
+        /// Click event for the Hold Dressing button, holds the dressing for the Veloci-Wrap order item.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
-        private void OnHoldJelly(object sender, RoutedEventArgs args)
+        private void OnHoldDressing(object sender, RoutedEventArgs args)
         {
-            pbj.HoldJelly();
+            wrap.HoldDressing();
         }
 
         /// <summary>
-        /// Click event for the done button; goes back to the entree selection page if it can,
-        /// if it cannot it will go back to the Menu Category Selection page.
+        /// Click event for the Hold Cheese button, holds the cheese for the Veloci-Wrap order item.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void OnHoldCheese(object sender, RoutedEventArgs args)
+        {
+            wrap.HoldCheese();
+        }
+
+        /// <summary>
+        /// Click event for the Done button.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>

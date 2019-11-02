@@ -1,8 +1,4 @@
-﻿/* Prehistoric PB&J Customization Page
- * Author: Jake Carlson
-*/
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,41 +17,51 @@ using DinoDiner.Menu;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for PrehistoricPBJCustomization.xaml
+    /// Interaction logic for BrontowurstCustomization.xaml
     /// </summary>
-    public partial class PrehistoricPBJCustomization : Page
+    public partial class BrontowurstCustomization : Page
     {
         // Private backing variables.
-        private PrehistoricPBJ pbj;
+        private Brontowurst bw;
 
         /// <summary>
-        /// Constructor for the Prehistoric PB&J Customization class.
+        /// Constructor for the Brontowurst Customization page.
         /// </summary>
-        /// <param name="pbj">The Prehistoric PB&J order item to be customized.</param>
-        public PrehistoricPBJCustomization(PrehistoricPBJ pbj)
+        /// <param name="bw">The brontowurst order item to be customized.</param>
+        public BrontowurstCustomization(Brontowurst bw)
         {
             InitializeComponent();
-            this.pbj = pbj;
+            this.bw = bw;
         }
 
         /// <summary>
-        /// Click event for the hold peanut butter button.
+        /// Click event for the hold bun button, holds the bun on the brontowurst.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
-        private void OnHoldPeanutButter(object sender, RoutedEventArgs args)
+        private void OnHoldBun(object sender, RoutedEventArgs args)
         {
-            pbj.HoldPeanutButter();
+            bw.HoldBun();
         }
 
         /// <summary>
-        /// Click event for the hold jelly button.
+        /// Click event for the hold peppers button, holds the peppers on the brontowurst.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
-        private void OnHoldJelly(object sender, RoutedEventArgs args)
+        private void OnHoldPeppers(object sender, RoutedEventArgs args)
         {
-            pbj.HoldJelly();
+            bw.HoldPeppers();
+        }
+
+        /// <summary>
+        /// Click event for the hold onions button, holds the onions on the brontowurst.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void OnHoldOnions(object sender, RoutedEventArgs args)
+        {
+            bw.HoldOnion();
         }
 
         /// <summary>
