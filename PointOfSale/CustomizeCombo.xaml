@@ -63,9 +63,9 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Label Grid.Row="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Bottom">Size</Label>
-            <RadioButton Grid.Row="1" Grid.Column="0" FontSize="20" FontWeight="SemiBold">Small</RadioButton>
-            <RadioButton Grid.Row="1" Grid.Column="1" FontSize="20" FontWeight="SemiBold">Medium</RadioButton>
-            <RadioButton Grid.Row="1" Grid.Column="2" FontSize="20" FontWeight="SemiBold">Large</RadioButton>
+            <RadioButton Click="OnMakeSmall" Grid.Row="1" Grid.Column="0" FontSize="20" FontWeight="SemiBold">Small</RadioButton>
+            <RadioButton Click="OnMakeMedium" Grid.Row="1" Grid.Column="1" FontSize="20" FontWeight="SemiBold">Medium</RadioButton>
+            <RadioButton Click="OnMakeLarge" Grid.Row="1" Grid.Column="2" FontSize="20" FontWeight="SemiBold">Large</RadioButton>
         </Grid>
         <Grid Grid.Row="4">
             <Grid.ColumnDefinitions>

@@ -47,6 +47,22 @@ namespace PointOfSale
         }
 
         /// <summary>
+        /// Helper function to set the size of the selected side and drink.
+        /// </summary>
+        /// <param name="size"></param>
+        private void SelectSize(DinoDiner.Menu.Size size)
+        {
+            if (combo.Side != null)
+            {
+                this.combo.Side.Size = size;
+            }
+            if (combo.Drink != null)
+            {
+                this.combo.Drink.Size = size;
+            }
+        }
+
+        /// <summary>
         /// Click event for choosing a side.
         /// </summary>
         /// <param name="sender"></param>
@@ -64,6 +80,36 @@ namespace PointOfSale
         private void DrinkSelection(object sender, RoutedEventArgs args)
         {
             NavigationService.Navigate(new DrinkSelection(combo));
+        }
+
+        /// <summary>
+        /// Click event for making the combo large.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        protected void OnMakeLarge(object sender, RoutedEventArgs args)
+        {
+            SelectSize(DinoDiner.Menu.Size.Large);
+        }
+
+        /// <summary>
+        /// Click event for making the combo medium.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        protected void OnMakeMedium(object sender, RoutedEventArgs args)
+        {
+            SelectSize(DinoDiner.Menu.Size.Medium);
+        }
+
+        /// <summary>
+        /// Click event for making the combo small.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        protected void OnMakeSmall(object sender, RoutedEventArgs args)
+        {
+            SelectSize(DinoDiner.Menu.Size.Small);
         }
 
         /// <summary>
