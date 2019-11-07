@@ -27,15 +27,27 @@ namespace PointOfSale
     {
         // Private backing variables.
         private PrehistoricPBJ pbj;
+        private CretaceousCombo combo;
 
         /// <summary>
-        /// Constructor for the Prehistoric PB&J Customization class.
+        /// Constructor for the Prehistoric PB&J Customization page.
         /// </summary>
         /// <param name="pbj">The Prehistoric PB&J order item to be customized.</param>
         public PrehistoricPBJCustomization(PrehistoricPBJ pbj)
         {
             InitializeComponent();
             this.pbj = pbj;
+        }
+
+        /// <summary>
+        /// Overloaded constructor for the Prehistoric PB&J Customization page. Passes in the selected entree from the Combo Selection page.
+        /// </summary>
+        /// <param name="combo">The combo that was picked in the Combo Selection page.</param>
+        public PrehistoricPBJCustomization(CretaceousCombo combo)
+        {
+            InitializeComponent();
+            this.pbj = (PrehistoricPBJ)combo.Entree;
+            this.combo = combo;
         }
 
         /// <summary>
@@ -59,14 +71,20 @@ namespace PointOfSale
         }
 
         /// <summary>
-        /// Click event for the done button; goes back to the entree selection page if it can,
-        /// if it cannot it will go back to the Menu Category Selection page.
+        /// Click event for the done button.
+        /// If Prehistoric PB&J was selected as the entree from the Combo Selection page, navigate to the Cusomize Combo page.
+        /// If Prehistoric PB&J was selected as the entree from the Entree Selection page, navigate back to the Entree Selection page.
+        /// If it cannot go back to the last page, navigate back to the Menu Category Selection page.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
         private void OnDone(object sender, RoutedEventArgs args)
         {
-            if (NavigationService.CanGoBack)
+            if (combo != null)
+            {
+                NavigationService.Navigate(new CustomizeCombo(combo));
+            }
+            else if (NavigationService.CanGoBack)
             {
                 NavigationService.GoBack();
             }

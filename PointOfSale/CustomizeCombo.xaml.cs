@@ -63,9 +63,14 @@ namespace PointOfSale
         /// <param name="args"></param>
         private void DrinkSelection(object sender, RoutedEventArgs args)
         {
-            NavigationService.Navigate(new DrinkSelection(combo.Drink));
+            NavigationService.Navigate(new DrinkSelection(combo));
         }
 
+        /// <summary>
+        /// Click event for the Done button, navigates back to the Menu Category Selection page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void OnDone(object sender, RoutedEventArgs args)
         {
             NavigationService.Navigate(new MenuCategorySelection());

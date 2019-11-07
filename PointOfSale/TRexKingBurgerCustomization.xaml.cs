@@ -27,6 +27,7 @@ namespace PointOfSale
     {
         // Private backing variables.
         private TRexKingBurger burger;
+        private CretaceousCombo combo;
 
         /// <summary>
         /// Constructor for the T-Rex King Burger Customization page.
@@ -36,6 +37,17 @@ namespace PointOfSale
         {
             InitializeComponent();
             this.burger = burger;
+        }
+
+        /// <summary>
+        /// Overloaded constructor for the T-Rex King Burger Customization page. Passes in the selected entree from the Combo Selection page.
+        /// </summary>
+        /// <param name="combo">The combo that was picked in the Combo Selection page.</param>
+        public TRexKingBurgerCustomization(CretaceousCombo combo)
+        {
+            InitializeComponent();
+            this.burger = (TRexKingBurger)combo.Entree;
+            this.combo = combo;
         }
 
         /// <summary>
@@ -119,13 +131,20 @@ namespace PointOfSale
         }
 
         /// <summary>
-        /// Click event for the Done button.
+        /// Click event for the done button.
+        /// If T-Rex King Burger was selected as the entree from the Combo Selection page, navigate to the Cusomize Combo page.
+        /// If T-Rex King Burger was selected as the entree from the Entree Selection page, navigate back to the Entree Selection page.
+        /// If it cannot go back to the last page, navigate back to the Menu Category Selection page.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
         private void OnDone(object sender, RoutedEventArgs args)
         {
-            if (NavigationService.CanGoBack)
+            if (combo != null)
+            {
+                NavigationService.Navigate(new CustomizeCombo(combo));
+            }
+            else if (NavigationService.CanGoBack)
             {
                 NavigationService.GoBack();
             }

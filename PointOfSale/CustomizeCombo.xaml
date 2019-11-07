@@ -73,7 +73,7 @@
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="1" >Done</Button>
+            <Button Click="OnDone" Grid.Column="1" >Done</Button>
         </Grid>
     </Grid>
 </Page>

@@ -29,7 +29,7 @@ namespace PointOfSale
         private CretaceousCombo combo;
 
         /// <summary>
-        /// Constructor for the combo selection class.
+        /// Constructor for the Combo Selection page.
         /// </summary>
         public ComboSelection()
         {
@@ -47,21 +47,6 @@ namespace PointOfSale
         }
 
         /// <summary>
-        /// Click event for customizing the combo.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="args"></param>
-        private void CustomizeCombo(object sender, RoutedEventArgs args)
-        {
-            if (DataContext is Order order)
-            {
-                Brontowurst bw = new Brontowurst();
-                CretaceousCombo combo = new CretaceousCombo(bw);
-                NavigationService.Navigate(new BrontowurstCustomization(bw));
-            }
-        }
-
-        /// <summary>
         /// Click event for the Brontowurst Combo button, adds a Brontowusrt combo to the order.
         /// </summary>
         /// <param name="sender"></param>
@@ -71,9 +56,105 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 Brontowurst bw = new Brontowurst();
-                CretaceousCombo combo = new CretaceousCombo(bw);
+                this.combo = new CretaceousCombo(bw);
                 order.Add(combo);
                 NavigationService.Navigate(new BrontowurstCustomization(combo));
+            }
+        }
+
+        /// <summary>
+        /// Click event for the Dino Nuggets Combo button, adds a Dino Nuggets combo to the order.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void OnSelectDinoNuggets(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                DinoNuggets nuggets = new DinoNuggets();
+                this.combo = new CretaceousCombo(nuggets);
+                order.Add(combo);
+                NavigationService.Navigate(new DinoNuggetsCustomization(combo));
+            }
+        }
+
+        /// <summary>
+        /// Click event for the Prehistoric PB&J Combo button, adds a Prehistoric PB&J combo to the orer.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void OnSelectPrehistoricPBJ(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                PrehistoricPBJ pbj = new PrehistoricPBJ();
+                this.combo = new CretaceousCombo(pbj);
+                order.Add(combo);
+                NavigationService.Navigate(new PrehistoricPBJCustomization(combo));
+            }
+        }
+
+        /// <summary>
+        /// Click event for the Pterodacyl Wings Combo button, adds a Pterodactyl Wings combo to the order.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void OnSelectPterodacylWings(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                PterodactylWings wings = new PterodactylWings();
+                this.combo = new CretaceousCombo(wings);
+                order.Add(combo);
+                NavigationService.Navigate(new PterodactylWingsCustomization(combo));
+            }
+        }
+
+        /// <summary>
+        /// Click event for the Steakosaurus Burger Combo button, adds a Steakosaurus combo to the order.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void OnSelectSteakosaurusBurger(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                SteakosaurusBurger burger = new SteakosaurusBurger();
+                this.combo = new CretaceousCombo(burger);
+                order.Add(combo);
+                NavigationService.Navigate(new SteakosaurusBurgerCustomization(combo));
+            }
+        }
+
+        /// <summary>
+        /// Click event for the T-Rex King Burger Combo button, adds a T-Rex King Burger combo to the order.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void OnSelectTRexKingBurger(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                TRexKingBurger burger = new TRexKingBurger();
+                this.combo = new CretaceousCombo(burger);
+                order.Add(combo);
+                NavigationService.Navigate(new TRexKingBurgerCustomization(combo));
+            }
+        }
+
+        /// <summary>
+        /// Click event for the Veloci-Wrap Combo button, adds a Veloci-Wrap combo to the order.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void OnSelectVelociWrap(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                VelociWrap wrap = new VelociWrap();
+                this.combo = new CretaceousCombo(wrap);
+                order.Add(combo);
+                NavigationService.Navigate(new VelociWrapCustomization(combo));
             }
         }
     }

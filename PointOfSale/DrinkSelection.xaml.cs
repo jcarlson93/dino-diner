@@ -27,6 +27,7 @@ namespace PointOfSale
     {
         // Private backing variable for the drink.
         private Drink drink;
+        private CretaceousCombo combo;
 
         /// <summary>
         /// Gets and sets the drink selected.
@@ -77,6 +78,29 @@ namespace PointOfSale
             }
         }
 
+        public DrinkSelection(CretaceousCombo combo)
+        {
+            InitializeComponent();
+            this.drink = combo.Drink;
+            this.combo = combo;
+            if (Drink is Sodasaurus soda)
+            {
+                SodasaurusSpecials();
+            }
+            if (Drink is Tyrannotea tea)
+            {
+                TyrannoteaSpecials();
+            }
+            if (Drink is JurassicJava java)
+            {
+                JurassicJavaSpecials();
+            }
+            if (Drink is Water water)
+            {
+                WaterSpecials();
+            }
+        }
+
         /// <summary>
         /// Navigates to the flavor selection page.
         /// </summary>
@@ -95,8 +119,16 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Add(drink);
-                Drink = drink;
+                if (combo != null)
+                {
+                    this.combo.Drink = drink;
+                    this.Drink = drink;
+                }
+                else
+                {
+                    order.Add(drink);
+                    Drink = drink;
+                }
             }
         }
 
@@ -108,7 +140,14 @@ namespace PointOfSale
         {
             if (Drink != null)
             {
-                Drink.Size = size;
+                if (combo != null)
+                {
+                    this.combo.Drink.Size = size;
+                }
+                else
+                {
+                    Drink.Size = size;
+                }
             }
         }
 

@@ -25,7 +25,7 @@
                 <TextBlock DockPanel.Dock="Bottom">Brontowurst Combo</TextBlock>
             </DockPanel>
         </Button>
-        <Button Click="CustomizeCombo" BorderThickness="2" BorderBrush="Black">
+        <Button Click="OnSelectDinoNuggets" BorderThickness="2" BorderBrush="Black">
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-02.png"/>
             </Button.Background>
@@ -33,7 +33,7 @@
                 <TextBlock DockPanel.Dock="Bottom">Dino-Nuggets Combo</TextBlock> 
             </DockPanel>
         </Button>
-        <Button Click="CustomizeCombo" BorderThickness="2" BorderBrush="Black">
+        <Button Click="OnSelectPrehistoricPBJ" BorderThickness="2" BorderBrush="Black">
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-03.png"></ImageBrush>
             </Button.Background>
@@ -41,7 +41,7 @@
                 <TextBlock DockPanel.Dock="Bottom">Prehistoric PB&amp;J Combo</TextBlock>
             </DockPanel>
         </Button>
-        <Button Click="CustomizeCombo" BorderThickness="2" BorderBrush="Black">
+        <Button Click="OnSelectPterodacylWings" BorderThickness="2" BorderBrush="Black">
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-04.png"/>
             </Button.Background>
@@ -49,7 +49,7 @@
                 <TextBlock DockPanel.Dock="Bottom">Pterodactyl Wings Combo</TextBlock>
             </DockPanel>
         </Button>
-        <Button Click="CustomizeCombo" BorderThickness="2" BorderBrush="Black">
+        <Button Click="OnSelectSteakosaurusBurger" BorderThickness="2" BorderBrush="Black">
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-05.png"/>
             </Button.Background>
@@ -57,7 +57,7 @@
                 <TextBlock DockPanel.Dock="Bottom">Steakosaurus Burger Combo</TextBlock>
             </DockPanel>
         </Button>
-        <Button Click="CustomizeCombo" BorderThickness="2" BorderBrush="Black">
+        <Button Click="OnSelectTRexKingBurger" BorderThickness="2" BorderBrush="Black">
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-06.png"/>
             </Button.Background>
@@ -65,7 +65,7 @@
                 <TextBlock DockPanel.Dock="Bottom">T-Rex King Burger Combo</TextBlock>
             </DockPanel>
         </Button>
-        <Button Click="CustomizeCombo" BorderThickness="2" BorderBrush="Black">
+        <Button Click="OnSelectVelociWrap" BorderThickness="2" BorderBrush="Black">
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-07.png"/>
             </Button.Background>
