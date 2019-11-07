@@ -87,6 +87,14 @@
                 Large
             </RadioButton>
         </Grid>
+        <Grid Grid.Row="2" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button Click="OnDone" Grid.Row="2" FontSize="18" FontWeight="SemiBold" BorderThickness="2" BorderBrush="Black">Done</Button>
+        </Grid>
         <ContentControl Content="{Binding Path=Items}">
             <ContentControl.ContentTemplate>
                 <DataTemplate>

@@ -17,7 +17,7 @@
             </Style>
         </WrapPanel.Resources>
         
-        <Button Click="CustomizeCombo" BorderThickness="2" BorderBrush="Black">
+        <Button Click="OnSelectBrontowurst" BorderThickness="2" BorderBrush="Black">
             <Button.Background>
                 <ImageBrush ImageSource="Assets/DinoDiner-01.png"/>
             </Button.Background>

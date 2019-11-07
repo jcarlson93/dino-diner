@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Brontowurst Customization Page
+ * Author: Jake Carlson
+*/ 
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +27,7 @@ namespace PointOfSale
     {
         // Private backing variables.
         private Brontowurst bw;
+        private CretaceousCombo combo;
 
         /// <summary>
         /// Constructor for the Brontowurst Customization page.
@@ -32,6 +37,17 @@ namespace PointOfSale
         {
             InitializeComponent();
             this.bw = bw;
+        }
+
+        /// <summary>
+        /// Overloaded constructor for the Brontowurst Customization page. Passes in the selected entree from the Combo Selection page.
+        /// </summary>
+        /// <param name="combo">The combo that was picked in the Combo Selection page.</param>
+        public BrontowurstCustomization(CretaceousCombo combo)
+        {
+            InitializeComponent();
+            this.bw = (Brontowurst)combo.Entree;
+            this.combo = combo;
         }
 
         /// <summary>
@@ -72,7 +88,11 @@ namespace PointOfSale
         /// <param name="args"></param>
         private void OnDone(object sender, RoutedEventArgs args)
         {
-            if (NavigationService.CanGoBack)
+            if (combo != null)
+            {
+                NavigationService.Navigate(new CustomizeCombo(combo));
+            }
+            else if (NavigationService.CanGoBack)
             {
                 NavigationService.GoBack();
             }

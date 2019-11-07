@@ -27,6 +27,7 @@ namespace PointOfSale
     {
         // Private backing variables.
         private Side side;
+        private CretaceousCombo combo;
 
         /// <summary>
         /// Gets and sets the side.
@@ -39,12 +40,12 @@ namespace PointOfSale
             }
             set
             {
-                side = value;
+                this.side = value;
             }
         }
 
         /// <summary>
-        /// Constructor for the side selection class.
+        /// Constructor for the Side Selection class.
         /// </summary>
         public SideSelection()
         {
@@ -52,13 +53,24 @@ namespace PointOfSale
         }
 
         /// <summary>
-        /// Overloaded constructor for the side selection class.
+        /// Overloaded constructor for the Side Selection page.
         /// </summary>
         /// <param name="side">The side that has been selected.</param>
         public SideSelection(Side side)
         {
             InitializeComponent();
-            Side = side;
+            this.side = side;
+        }
+
+        /// <summary>
+        /// Overloaded constructor for the Side Selection page. Passes in a combo if coming from Customize Combo page.
+        /// </summary>
+        /// <param name="combo"></param>
+        public SideSelection(CretaceousCombo combo)
+        {
+            InitializeComponent();
+            this.combo = combo;
+            this.side = combo.Side;
         }
 
         /// <summary>
@@ -69,8 +81,16 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Add(side);
-                Side = side;
+                if (combo != null)
+                {
+                    this.combo.Side = side;
+                    this.Side = side;
+                }
+                else
+                {
+                    order.Add(side);
+                    this.Side = side;
+                }
             }
         }
 
@@ -82,7 +102,11 @@ namespace PointOfSale
         {
             if (Side != null)
             {
-                Side.Size = size;
+                if (combo != null)
+                {
+                    this.combo.Side.Size = size;
+                }
+                this.Side.Size = size;
             }
         }
 
@@ -94,13 +118,6 @@ namespace PointOfSale
         public void OnSelectFryceritops(object sender, RoutedEventArgs args)
         {
             SelectSide(new Fryceritops());
-            /*BtnAddFryceritops.IsEnabled = false;
-            BtnAddMeteorMacAndCheese.IsEnabled = false;
-            BtnAddMezzorellaSticks.IsEnabled = false;
-            BtnAddTriceritots.IsEnabled = false;
-            BtnPickSmall.IsEnabled = true;
-            BtnPickMedium.IsEnabled = true;
-            BtnPickLarge.IsEnabled = true;*/
         }
 
         /// <summary>
@@ -111,13 +128,6 @@ namespace PointOfSale
         public void OnSelectTriceritots(object sender, RoutedEventArgs args)
         {
             SelectSide(new Triceritots());
-            /*BtnAddFryceritops.IsEnabled = false;
-            BtnAddMeteorMacAndCheese.IsEnabled = false;
-            BtnAddMezzorellaSticks.IsEnabled = false;
-            BtnAddTriceritots.IsEnabled = false;
-            BtnPickSmall.IsEnabled = true;
-            BtnPickMedium.IsEnabled = true;
-            BtnPickLarge.IsEnabled = true;*/
         }
 
         /// <summary>
@@ -128,13 +138,6 @@ namespace PointOfSale
         public void OnSelectMeteorMacAndCheese(object sender, RoutedEventArgs args)
         {
             SelectSide(new MeteorMacAndCheese());
-            /*BtnAddFryceritops.IsEnabled = false;
-            BtnAddMeteorMacAndCheese.IsEnabled = false;
-            BtnAddMezzorellaSticks.IsEnabled = false;
-            BtnAddTriceritots.IsEnabled = false;
-            BtnPickSmall.IsEnabled = true;
-            BtnPickMedium.IsEnabled = true;
-            BtnPickLarge.IsEnabled = true;*/
         }
 
         /// <summary>
@@ -145,13 +148,6 @@ namespace PointOfSale
         public void OnSelectMezzorellaSticks(object sender, RoutedEventArgs args)
         {
             SelectSide(new MezzorellaSticks());
-            /*BtnAddFryceritops.IsEnabled = false;
-            BtnAddMeteorMacAndCheese.IsEnabled = false;
-            BtnAddMezzorellaSticks.IsEnabled = false;
-            BtnAddTriceritots.IsEnabled = false;
-            BtnPickSmall.IsEnabled = true;
-            BtnPickMedium.IsEnabled = true;
-            BtnPickLarge.IsEnabled = true;*/
         }
 
         /// <summary>
@@ -182,6 +178,23 @@ namespace PointOfSale
         protected void OnMakeSmall(object sender, RoutedEventArgs args)
         {
             SelectSize(DinoDiner.Menu.Size.Small);
+        }
+
+        /// <summary>
+        /// Click event for the Done button.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void OnDone(object sender, RoutedEventArgs args)
+        {
+            if (NavigationService.CanGoBack)
+            {
+                NavigationService.GoBack();
+            }
+            else
+            {
+                NavigationService.Navigate(new MenuCategorySelection());
+            }
         }
     }
 }

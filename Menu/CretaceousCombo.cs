@@ -16,21 +16,69 @@ namespace DinoDiner.Menu
     {
         // Backing Variables
         private Size size;
+        private Entree entree;
+        private Side side;
+        private Drink drink;
 
         /// <summary>
         /// Gets and sets the entree
         /// </summary>
-        public Entree Entree { get; set; }
+        public Entree Entree
+        {
+            get
+            {
+                return entree;
+            }
+            set
+            {
+                this.entree = value;
+                NotifyOfPropertyChange("Description");
+                NotifyOfPropertyChange("Size");
+                NotifyOfPropertyChange("Price");
+                NotifyOfPropertyChange("Calories");
+                NotifyOfPropertyChange("Special");
+            }
+        }
 
         /// <summary>
         /// Gets and sets the side
         /// </summary>
-        public Side Side { get; set; } = new Fryceritops();
+        public Side Side
+        {
+            get
+            {
+                return side;
+            }
+            set
+            {
+                this.side = value;
+                NotifyOfPropertyChange("Description");
+                NotifyOfPropertyChange("Size");
+                NotifyOfPropertyChange("Price");
+                NotifyOfPropertyChange("Calories");
+                NotifyOfPropertyChange("Special");
+            }
+        }
 
         /// <summary>
         /// Gets and sets the drink
         /// </summary>
-        public Drink Drink { get; set; } = new Sodasaurus();
+        public Drink Drink
+        {
+            get
+            {
+                return drink;
+            }
+            set
+            {
+                this.drink = value;
+                NotifyOfPropertyChange("Description");
+                NotifyOfPropertyChange("Size");
+                NotifyOfPropertyChange("Price");
+                NotifyOfPropertyChange("Calories");
+                NotifyOfPropertyChange("Special");
+            }
+        }
 
         /// <summary>
         /// Gets the price of the combo
@@ -65,6 +113,11 @@ namespace DinoDiner.Menu
                 size = value;
                 Drink.Size = value;
                 Side.Size = value;
+                NotifyOfPropertyChange("Description");
+                NotifyOfPropertyChange("Size");
+                NotifyOfPropertyChange("Price");
+                NotifyOfPropertyChange("Calories");
+                NotifyOfPropertyChange("Special");
             }
         }
 
@@ -131,7 +184,9 @@ namespace DinoDiner.Menu
         /// <param name="entree">The entree to use</param>
         public CretaceousCombo(Entree entree)
         {
-            this.Entree = entree;
+            Entree = entree;
+            Side = new Fryceritops();
+            Drink = new Sodasaurus();
         }
 
         /// <summary>
