@@ -1,4 +1,4 @@
-﻿/* TRexKingBurger.cs
+﻿/* T-Rex King Burger Class
  * Author: Jake Carlson
  */
 using System.Collections.Generic;

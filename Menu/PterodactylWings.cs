@@ -1,4 +1,4 @@
-﻿/* PterodactylWings.cs
+﻿/* PterodactylWings Class
  * Author: Jake Carlson
  */
 using System.Collections.Generic;

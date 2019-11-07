@@ -133,6 +133,11 @@ namespace DinoDiner.Menu
             return removed;
         }
 
+        /// <summary>
+        /// Notifies when a property has changed.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void OnPropertyChanged(object sender, PropertyChangedEventArgs args)
         {
             NotifyAllPropertiesChanged();

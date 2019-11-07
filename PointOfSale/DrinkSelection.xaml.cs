@@ -78,6 +78,10 @@ namespace PointOfSale
             }
         }
 
+        /// <summary>
+        /// Overloaded constructor for the Drink Selection page. Passes in a combo if coming from Customize Combo page.
+        /// </summary>
+        /// <param name="combo">The combo to customize a drink for.</param>
         public DrinkSelection(CretaceousCombo combo)
         {
             InitializeComponent();
@@ -114,7 +118,7 @@ namespace PointOfSale
         /// <summary>
         /// Helper function to add the selected drink to the order.
         /// </summary>
-        /// <param name="drink"></param>
+        /// <param name="drink">The drink to add to the order.</param>
         private void SelectDrink(Drink drink)
         {
             if (DataContext is Order order)

@@ -1,4 +1,4 @@
-﻿/* Dino Nuggets.cs
+﻿/* Dino Nuggets Class
  * Author: Jake Carlson
  */
 using System.Collections.Generic;

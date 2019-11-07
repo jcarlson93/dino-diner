@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Dino Nugget Customization Page
+ * Author: Jake Carlson
+*/ 
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

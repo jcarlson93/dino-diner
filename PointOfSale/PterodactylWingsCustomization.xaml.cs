@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Pterodactyl Wings Customization page.
+ * Author: Jake Carlson
+*/ 
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

@@ -1,4 +1,4 @@
-﻿/* VelociWrap.cs
+﻿/* VelociWrap Class
  * Author: Jake Carlson
  */
 using System.Collections.Generic;

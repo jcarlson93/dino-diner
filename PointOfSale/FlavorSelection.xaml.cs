@@ -66,7 +66,7 @@ namespace PointOfSale
         /// <summary>
         /// Overloaded constructor for the Flavor Selection class. 
         /// </summary>
-        /// <param name="soda"></param>
+        /// <param name="soda">The sodasaurus drink to be customized.</param>
         public FlavorSelection(Sodasaurus sodas)
         {
             InitializeComponent();
@@ -76,7 +76,7 @@ namespace PointOfSale
         /// <summary>
         /// Helper function for to set the flavor of the drink.
         /// </summary>
-        /// <param name="flavor"></param>
+        /// <param name="flavor">The flavor to make the sodasaurus drink.</param>
         private void SelectFlavor(SodasaurusFlavor flavor)
         {
             if (DataContext is Order order)

@@ -46,7 +46,7 @@ namespace PointOfSale
         }
 
         /// <summary>
-        /// 
+        /// Notifies when the frame has finished loading.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
@@ -56,7 +56,7 @@ namespace PointOfSale
         }
 
         /// <summary>
-        /// 
+        /// Notifies when the data context has changed.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
@@ -66,7 +66,7 @@ namespace PointOfSale
         }
 
         /// <summary>
-        /// 
+        /// Sets the Data Context for the Frame.
         /// </summary>
         private void SetFrameDataContext()
         {
@@ -76,7 +76,7 @@ namespace PointOfSale
         }
 
         /// <summary>
-        /// 
+        /// Click event for the Go Back button.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>

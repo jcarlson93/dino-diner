@@ -1,4 +1,4 @@
-﻿/* SteakosaurusBurger.cs
+﻿/* SteakosaurusBurger Class
  * Author: Jake Carlson
  */
 using System.Collections.Generic;

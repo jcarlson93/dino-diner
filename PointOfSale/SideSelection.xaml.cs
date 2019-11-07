@@ -65,7 +65,7 @@ namespace PointOfSale
         /// <summary>
         /// Overloaded constructor for the Side Selection page. Passes in a combo if coming from Customize Combo page.
         /// </summary>
-        /// <param name="combo"></param>
+        /// <param name="combo">The combo to customize a side for.</param>
         public SideSelection(CretaceousCombo combo)
         {
             InitializeComponent();
@@ -76,7 +76,7 @@ namespace PointOfSale
         /// <summary>
         /// Helper function to add the side to the order.
         /// </summary>
-        /// <param name="side"></param>
+        /// <param name="side">The side to add to the order.</param>
         private void SelectSide(Side side)
         {
             if (DataContext is Order order)
@@ -97,7 +97,7 @@ namespace PointOfSale
         /// <summary>
         /// Helper function to set the size of the selected side.
         /// </summary>
-        /// <param name="size"></param>
+        /// <param name="size">The size to make the side.</param>
         private void SelectSize(DinoDiner.Menu.Size size)
         {
             if (Side != null)
