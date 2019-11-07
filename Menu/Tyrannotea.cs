@@ -17,11 +17,24 @@ namespace DinoDiner.Menu
         /// Stores the size of the Tyrannotea drink.
         /// </summary>
         private Size size;
+        private bool sweet = false;
 
         /// <summary>
         /// Tells whether the tyrannotea is sweet or not.
         /// </summary>
-        public bool Sweet { get; set; } = false;
+        public bool Sweet
+        {
+            get
+            {
+                return sweet;
+            }
+            set
+            {
+                this.sweet = value;
+                NotifyOfPropertyChange("Sweet");
+                NotifyOfPropertyChange("Description");
+            }
+        }
 
         /// <summary>
         /// Tells whether the tyrannotea has lemon or not.
@@ -128,6 +141,7 @@ namespace DinoDiner.Menu
         {
             this.Sweet = true;
             NotifyOfPropertyChange("Description");
+            NotifyOfPropertyChange("Sweet");
         }
 
         /// <summary>
