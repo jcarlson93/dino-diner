@@ -524,6 +524,13 @@
             </summary>
             <param name="item">The item to remove from the lsit.</param>
         </member>
+        <member name="M:DinoDiner.Menu.Order.OnPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Notifies when a property has changed.
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
         <member name="M:DinoDiner.Menu.Order.NotifyAllPropertiesChanged">
             <summary>
             Notifies when all of the properties have changed.

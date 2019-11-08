@@ -32,6 +32,15 @@ namespace DinoDiner.Menu
             set
             {
                 this.entree = value;
+                Entree.PropertyChanged += (object sender, PropertyChangedEventArgs args) =>
+                {
+                    NotifyOfPropertyChange("Description");
+                    NotifyOfPropertyChange("Size");
+                    NotifyOfPropertyChange("Price");
+                    NotifyOfPropertyChange("Calories");
+                    NotifyOfPropertyChange("Special");
+                    NotifyOfPropertyChange("Ingredients");
+                };
                 NotifyOfPropertyChange("Description");
                 NotifyOfPropertyChange("Size");
                 NotifyOfPropertyChange("Price");
@@ -53,6 +62,15 @@ namespace DinoDiner.Menu
             set
             {
                 this.side = value;
+                Side.PropertyChanged += (object sender, PropertyChangedEventArgs args) =>
+                {
+                    NotifyOfPropertyChange("Description");
+                    NotifyOfPropertyChange("Size");
+                    NotifyOfPropertyChange("Price");
+                    NotifyOfPropertyChange("Calories");
+                    NotifyOfPropertyChange("Special");
+                    NotifyOfPropertyChange("Ingredients");
+                };
                 NotifyOfPropertyChange("Description");
                 NotifyOfPropertyChange("Size");
                 NotifyOfPropertyChange("Price");
@@ -74,6 +92,15 @@ namespace DinoDiner.Menu
             set
             {
                 this.drink = value;
+                Drink.PropertyChanged += (object sender, PropertyChangedEventArgs args) =>
+                {
+                    NotifyOfPropertyChange("Description");
+                    NotifyOfPropertyChange("Size");
+                    NotifyOfPropertyChange("Price");
+                    NotifyOfPropertyChange("Calories");
+                    NotifyOfPropertyChange("Special");
+                    NotifyOfPropertyChange("Ingredients");
+                };
                 NotifyOfPropertyChange("Description");
                 NotifyOfPropertyChange("Size");
                 NotifyOfPropertyChange("Price");
