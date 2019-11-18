@@ -14,7 +14,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Assets\" />
     <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Menu\Menu.csproj" />
   </ItemGroup>
 
 </Project>
