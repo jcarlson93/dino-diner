@@ -12,7 +12,7 @@ body {
     padding-right: 15px;
 }
 
-.header-content:nth-child(2) {
+.header-content img {
     max-height: 20vh;
     max-width: 20vw;
 }
@@ -23,6 +23,7 @@ body {
 }
 
 .menu-item > h4 {
+    font-size: 1.17em;
     padding-bottom: 0px;
     margin: 0px;
 }
