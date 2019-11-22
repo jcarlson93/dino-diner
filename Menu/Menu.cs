@@ -5,6 +5,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace DinoDiner.Menu
 {
@@ -140,5 +141,10 @@ namespace DinoDiner.Menu
             }
             return menu.ToString();
         }
+
+        /*public List<IMenuItem> Search()
+        {
+
+        }*/
     }
 }

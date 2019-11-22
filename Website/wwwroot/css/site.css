@@ -5,6 +5,26 @@ body {
     padding-bottom: 20px;
 }
 
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+form {
+    background-color: lightgray;
+    padding: 20px;
+    margin-left: 5px;
+}
+
+.price-filters input {
+    //max-width: 50px;
+}
+
+.menu-category {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .header-content {
