@@ -15,7 +15,7 @@ namespace DinoDiner.Menu
     public class Menu
     {
         /// <summary>
-        /// Gets a list of the possible ingredients in all of the menu items.
+        /// Gets a list of the possible unique ingredients in all of the menu items.
         /// </summary>
         public List<string> PossibleIngredients
         {

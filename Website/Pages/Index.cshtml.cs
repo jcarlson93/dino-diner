@@ -1,4 +1,7 @@
-﻿using System;
+﻿/* Website Main Page
+ * Author: Jake Carlson
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
