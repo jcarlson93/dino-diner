@@ -121,6 +121,14 @@ namespace Website.Pages
                 AvailableSides = FilterByMaxPrice(AvailableSides);
                 AvailableDrinks = FilterByMaxPrice(AvailableDrinks);
             }
+
+            if (possibleIngredients.Count > 0)
+            {
+                AvailableCombos = FilterByIngredients(AvailableCombos);
+                AvailableEntrees = FilterByIngredients(AvailableEntrees);
+                AvailableSides = FilterByIngredients(AvailableSides);
+                AvailableDrinks = FilterByIngredients(AvailableDrinks);
+            }
         }
 
         public List<IMenuItem> FilterByMinPrice(List<IMenuItem> items)
@@ -146,6 +154,23 @@ namespace Website.Pages
                 if (item.Price <= maximumPrice)
                 {
                     filtered.Add(item);
+                }
+            }
+            return filtered;
+        }
+
+        public List<IMenuItem> FilterByIngredients(List<IMenuItem> items)
+        {
+            List<IMenuItem> filtered = new List<IMenuItem>();
+
+            foreach (IMenuItem item in items)
+            {
+                foreach (string i in possibleIngredients)
+                {
+                    if (!item.Ingredients.Contains(i))
+                    {
+                        filtered.Add(item);
+                    }
                 }
             }
             return filtered;

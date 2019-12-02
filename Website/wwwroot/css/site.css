@@ -25,6 +25,11 @@ form {
     flex-direction: column;
 }
 
+.exclude-ingredient {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .header-content {

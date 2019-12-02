@@ -175,10 +175,10 @@
             <div class="exclude-ingredient">
                 @foreach (string i in Model.Menu.PossibleIngredients)
                 {
-                    <label>
-                        @(i)
-                        <input type="checkbox" name="possibleIngredients" value="@(i)" />
-                    </label>
+                <label>
+                    <input type="checkbox" name="possibleIngredients" value="@(i)" checked="@Model.possibleIngredients.Contains(i)"/>
+                    @(i)
+                </label>
                 }
             </div>
         </form>
