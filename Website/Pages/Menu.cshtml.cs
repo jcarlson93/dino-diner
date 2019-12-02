@@ -77,6 +77,9 @@ namespace Website.Pages
         [BindProperty]
         public double? maximumPrice { get; set; }
 
+        [BindProperty]
+        public List<string> possibleIngredients { get; set; } = new List<string>();
+
         /// <summary>
         /// Property to get the menu.
         /// </summary>

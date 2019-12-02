@@ -15,6 +15,26 @@ namespace DinoDiner.Menu
     public class Menu
     {
         /// <summary>
+        /// Gets a list of the possible ingredients in all of the menu items.
+        /// </summary>
+        public List<string> PossibleIngredients
+        {
+            get
+            {
+                HashSet<string> ingredients = new HashSet<string>();
+                Menu menu = new Menu();
+                foreach (IMenuItem item in menu.AvailableMenuItems)
+                {
+                    foreach (string i in item.Ingredients)
+                    {
+                        ingredients.Add(i);
+                    }
+                }
+                return ingredients.ToList();
+            }
+        }
+
+        /// <summary>
         /// Gets a list of the available menu items.
         /// </summary>
         public List<IMenuItem> AvailableMenuItems
@@ -141,10 +161,5 @@ namespace DinoDiner.Menu
             }
             return menu.ToString();
         }
-
-        /*public List<IMenuItem> Search()
-        {
-
-        }*/
     }
 }

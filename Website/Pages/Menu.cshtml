@@ -173,7 +173,13 @@
 
             <h5>Exclude Ingredients</h5>
             <div class="exclude-ingredient">
-
+                @foreach (string i in Model.Menu.PossibleIngredients)
+                {
+                    <label>
+                        @(i)
+                        <input type="checkbox" name="possibleIngredients" value="@(i)" />
+                    </label>
+                }
             </div>
         </form>
     </div>
