@@ -15,15 +15,15 @@ namespace Website.Pages
     {
         // Private access variables
         private Menu _menu = new Menu();
-        private List<IMenuItem> combos = new List<IMenuItem>();
-        private List<IMenuItem> entrees = new List<IMenuItem>();
-        private List<IMenuItem> sides = new List<IMenuItem>();
-        private List<IMenuItem> drinks = new List<IMenuItem>();
+        private IEnumerable<IMenuItem> combos;
+        private IEnumerable<IMenuItem> entrees;
+        private IEnumerable<IMenuItem> sides;
+        private IEnumerable<IMenuItem> drinks;
 
         /// <summary>
         /// Property to get and set the list of all the available combos in the Dino-Diner Menu.
         /// </summary>
-        public List<IMenuItem> AvailableCombos
+        public IEnumerable<IMenuItem> AvailableCombos
         {
             get
             {
@@ -38,7 +38,7 @@ namespace Website.Pages
         /// <summary>
         /// Property to get and set the list of all the available entrees in the Dino-Diner Menu.
         /// </summary>
-        public List<IMenuItem> AvailableEntrees
+        public IEnumerable<IMenuItem> AvailableEntrees
         {
             get
             {
@@ -53,7 +53,7 @@ namespace Website.Pages
         /// <summary>
         /// Property to get and set the list of all the available sides in the Dino-Diner Menu.
         /// </summary>
-        public List<IMenuItem> AvailableSides
+        public IEnumerable<IMenuItem> AvailableSides
         {
             get
             {
@@ -68,7 +68,7 @@ namespace Website.Pages
         /// <summary>
         /// Property to get and set the list of all the available drinks in the Dino-Diner Menu.
         /// </summary>
-        public List<IMenuItem> AvailableDrinks
+        public IEnumerable<IMenuItem> AvailableDrinks
         {
             get
             {
@@ -144,34 +144,37 @@ namespace Website.Pages
 
             if (search != null)
             {
-                AvailableCombos = Search(AvailableCombos);
-                AvailableEntrees = Search(AvailableEntrees);
-                AvailableSides = Search(AvailableSides);
-                AvailableDrinks = Search(AvailableDrinks);
+                AvailableCombos = AvailableCombos.Where(item => item.ToString().Contains(search, StringComparison.OrdinalIgnoreCase));
+                AvailableEntrees = AvailableEntrees.Where(item => item.ToString().Contains(search, StringComparison.OrdinalIgnoreCase));
+                AvailableSides = AvailableSides.Where(item => item.ToString().Contains(search, StringComparison.OrdinalIgnoreCase));
+                AvailableDrinks = AvailableDrinks.Where(item => item.ToString().Contains(search, StringComparison.OrdinalIgnoreCase));
             }
 
             if (minimumPrice != null && minimumPrice < maximumPrice)
             {
-                AvailableCombos = FilterByMinPrice(AvailableCombos);
-                AvailableEntrees = FilterByMinPrice(AvailableEntrees);
-                AvailableSides = FilterByMinPrice(AvailableSides);
-                AvailableDrinks = FilterByMinPrice(AvailableDrinks);
+                AvailableCombos = AvailableCombos.Where(item => item.Price >= minimumPrice);
+                AvailableEntrees = AvailableEntrees.Where(item => item.Price >= minimumPrice);
+                AvailableSides = AvailableSides.Where(item => item.Price >= minimumPrice);
+                AvailableDrinks = AvailableDrinks.Where(item => item.Price >= minimumPrice);
             }
 
             if (maximumPrice != null && maximumPrice > minimumPrice)
             {
-                AvailableCombos = FilterByMaxPrice(AvailableCombos);
-                AvailableEntrees = FilterByMaxPrice(AvailableEntrees);
-                AvailableSides = FilterByMaxPrice(AvailableSides);
-                AvailableDrinks = FilterByMaxPrice(AvailableDrinks);
+                AvailableCombos = AvailableCombos.Where(item => item.Price <= maximumPrice);
+                AvailableEntrees = AvailableEntrees.Where(item => item.Price <= maximumPrice);
+                AvailableSides = AvailableSides.Where(item => item.Price <= maximumPrice);
+                AvailableDrinks = AvailableDrinks.Where(item => item.Price <= maximumPrice);
             }
 
             if (possibleIngredients.Count > 0)
             {
-                AvailableCombos = FilterByIngredients(AvailableCombos);
-                AvailableEntrees = FilterByIngredients(AvailableEntrees);
-                AvailableSides = FilterByIngredients(AvailableSides);
-                AvailableDrinks = FilterByIngredients(AvailableDrinks);
+                foreach (string i in possibleIngredients)
+                {
+                    AvailableCombos = AvailableCombos.Where(item => !item.Ingredients.Contains(i));
+                    AvailableEntrees = AvailableEntrees.Where(item => !item.Ingredients.Contains(i));
+                    AvailableSides = AvailableSides.Where(item => !item.Ingredients.Contains(i));
+                    AvailableDrinks = AvailableDrinks.Where(item => !item.Ingredients.Contains(i));
+                }
             }
         }
 

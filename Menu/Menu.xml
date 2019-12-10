@@ -381,7 +381,7 @@
         </member>
         <member name="P:DinoDiner.Menu.Menu.PossibleIngredients">
             <summary>
-            Gets a list of the possible ingredients in all of the menu items.
+            Gets a list of the possible unique ingredients in all of the menu items.
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Menu.AvailableMenuItems">
